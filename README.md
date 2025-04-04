@@ -1,0 +1,2 @@
+# StellarDrive Performance Stats
+StellarDrive mod that enables displaying performance stats. Currently fails at runtime when attempting to use LibreHardwareMonitorLib despite my supposedly successful attempt to build and use a version of it for netstandard2.1
