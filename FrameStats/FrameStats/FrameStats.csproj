@@ -8,10 +8,11 @@
 		<IsPackable>false</IsPackable>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
-		<NeutralLanguage>en-US</NeutralLanguage>
+    <NeutralLanguage>en-US</NeutralLanguage>
 		<AssemblyName>FrameStats</AssemblyName>
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -437,8 +438,9 @@
 	<ItemGroup>
 	  <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.4" />
 	</ItemGroup>
-	
+
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\Mods&quot;" />
-	</Target>
+	  <Exec Command="copy &quot;$(TargetPath)&quot; &quot;C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\Mods&quot;" />
+    <Exec Command="py &quot;$(ProjectDir)copy_userlibs.py&quot;" />
+  </Target>
 </Project>

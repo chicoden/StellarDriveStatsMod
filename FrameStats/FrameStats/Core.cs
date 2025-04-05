@@ -1,5 +1,5 @@
 ﻿using MelonLoader;
-//using LibreHardwareMonitor.Hardware;
+using LibreHardwareMonitor.Hardware;
 using UnityEngine;
 
 [assembly: MelonInfo(typeof(FrameStats.Core), "FrameStats", "1.0.0", "oneshade", null)]
@@ -12,17 +12,17 @@ namespace FrameStats {
         private GameObject optionsMenu = null;
         private bool hadOptionsMenu = false;
 
-        /*private static Computer computer = new Computer{
+        private static Computer computer = new Computer{
             IsBatteryEnabled = true,
             IsCpuEnabled = true,
             IsGpuEnabled = true,
             IsMemoryEnabled = true
-        };*/
+        };
 
         public override void OnInitializeMelon() {
             Melon<Core>.Logger.Msg("melon initialized");
 
-            /*computer.Open();
+            computer.Open();
             computer.Accept(new HardwareUpdateVisitor());
 
             foreach (IHardware hardware in computer.Hardware) {
@@ -39,7 +39,7 @@ namespace FrameStats {
                 }
             }
 
-            computer.Close();*/
+            computer.Close();
         }
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName) {

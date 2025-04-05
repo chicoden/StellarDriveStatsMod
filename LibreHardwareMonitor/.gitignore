@@ -1,7 +1,0 @@
-*.user
-*.suo
-[Bb]in/
-[Oo]bj/
-.idea/
-.vs/
-packages/

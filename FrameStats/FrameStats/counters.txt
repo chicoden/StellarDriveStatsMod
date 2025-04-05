@@ -1,0 +1,10 @@
+Name               | Object                     | Counter                  | Instance
+-------------------+----------------------------+--------------------------+-------------------------------------------------------------------
+Battery Level      | "Battery Status"           | "Remaining Capacity"     | "ACPI\PNP0C0A\0_0"
+CPU Temperature    | "Thermal Zone Information" | "Temperature"            | "\_TZ.TZ00"
+CPU Usage          | "Processor"                | "% Processor Time"       | "_Total"
+RAM Used           | "Memory"                   | "Committed Bytes"        | ---
+GPU Temperature    | "EsifDeviceInformation"    | "Temperature"            | "PCI\VEN_8086&DEV_A71D&SUBSYS_382D17AA&REV_01\3&11583659&1&20_<#>"
+GPU Usage          | "GPU Engine"               | "Utilization Percentage" | "pid_<#>_luid_0x<#>_0x<#>_phys_<#>_eng_<#>_engtype_<...>"
+Dedicated RAM Used | "GPU Adapter Memory"       | "Dedicated Usage"        | "luid_0x<#>_0x<#>_phys_<#>"
+Shared RAM Used    | "GPU Adapter Memory"       | "Shared Usage"           | "luid_0x<#>_0x<#>_phys_<#>"

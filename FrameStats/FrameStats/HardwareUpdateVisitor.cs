@@ -1,4 +1,4 @@
-﻿/*using LibreHardwareMonitor.Hardware;
+﻿using LibreHardwareMonitor.Hardware;
 
 namespace FrameStats {
     public class HardwareUpdateVisitor : IVisitor {
@@ -16,4 +16,4 @@ namespace FrameStats {
         public void VisitSensor(ISensor sensor) {}
         public void VisitParameter(IParameter parameter) {}
     }
-}*/
+}
