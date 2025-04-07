@@ -1,0 +1,270 @@
+
+[20:41:04.913] ------------------------------
+[20:41:04.935] MelonLoader v0.7.0 Open-Beta
+[20:41:04.936] OS: Windows 11
+[20:41:04.936] Hash Code: F2DCA88FB1569FD6750096CED35BBB808C50BA273E0D295347A24385B0B764CA
+[20:41:04.936] ------------------------------
+[20:41:04.937] Game Type: MonoBleedingEdge
+[20:41:04.937] Game Arch: x64
+[20:41:04.937] ------------------------------
+[20:41:04.938] Command-Line: 
+[20:41:04.938] ------------------------------
+[20:41:04.939] Core::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[20:41:04.939] Game::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[20:41:04.939] Game::DataPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive_Data
+[20:41:04.939] Game::ApplicationPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive.exe
+[20:41:04.939] Runtime Type: net35
+[20:41:05.008] ------------------------------
+[20:41:05.008] Game Name: StellarDrive
+[20:41:05.009] Game Developer: CuriousOwlGames
+[20:41:05.010] Unity Version: 2022.3.11f1
+[20:41:05.011] Game Version: UNKNOWN
+[20:41:05.011] ------------------------------
+
+[20:41:05.255] Preferences Loaded!
+
+[20:41:05.277] Loading UserLibs...
+[20:41:05.392] ------------------------------
+[20:41:05.396] Melon Assembly loaded: '.\UserLibs\HidSharp.dll'
+[20:41:05.396] SHA256 Hash: '61EB2E22A5620D789A23D389F1AF9D38FAFF4D85F46ADEDBC28FB22CFEC61BF9'
+[20:41:05.402] Melon Assembly loaded: '.\UserLibs\LibreHardwareMonitorLib.dll'
+[20:41:05.403] SHA256 Hash: '99B39B0B0AC865C38A33DFF7DEE080FF17AAC3337B2332812CA2D7BB13C89460'
+[20:41:05.403] Melon Assembly loaded: '.\UserLibs\Microsoft.Win32.Registry.dll'
+[20:41:05.404] SHA256 Hash: 'D641EB0065BD5CDB541C5BF0D2FF976720D35D62416AB959727651ABF0ABA2CA'
+[20:41:05.404] Melon Assembly loaded: '.\UserLibs\System.Buffers.dll'
+[20:41:05.405] SHA256 Hash: 'C65FFF603B283DC966D1A8B730C11D5E5E750E8021BD24640612F6CC3F2C6FB7'
+[20:41:05.406] Melon Assembly loaded: '.\UserLibs\System.CodeDom.dll'
+[20:41:05.407] SHA256 Hash: 'CF18C822A341A3932FC8C08D7F21BF015F7E3C2696619560C94B63629341376A'
+[20:41:05.407] Melon Assembly loaded: '.\UserLibs\System.IO.FileSystem.AccessControl.dll'
+[20:41:05.408] SHA256 Hash: 'D2D6CD3FEF822959B68A68A6AF6096963BBE6493D90E16F0AF65FEDE25D85F32'
+[20:41:05.409] Melon Assembly loaded: '.\UserLibs\System.IO.Ports.dll'
+[20:41:05.409] SHA256 Hash: 'B1ECEF838C8B833BE76D1EF75AD8A0B1FAD805FC951136C9E5256FD3CF15FC1B'
+[20:41:05.410] Melon Assembly loaded: '.\UserLibs\System.Management.dll'
+[20:41:05.411] SHA256 Hash: '205BF789DD38D8ABC5FDC9CD8653469400ED9D6386B07384609848B9C95D7721'
+[20:41:05.413] Melon Assembly loaded: '.\UserLibs\System.Memory.dll'
+[20:41:05.413] SHA256 Hash: 'D2E3949FCF3A3B3A20BB9A568A4DA582D9A90D64F34C0BDC07C9029BFE8F1858'
+[20:41:05.416] Melon Assembly loaded: '.\UserLibs\System.Numerics.Vectors.dll'
+[20:41:05.416] SHA256 Hash: '2324EE5A35674269225E2AA20957CE8830DBCA0CFFB918BD593F7A3222DEE480'
+[20:41:05.417] Melon Assembly loaded: '.\UserLibs\System.Runtime.CompilerServices.Unsafe.dll'
+[20:41:05.417] SHA256 Hash: 'BFC8F02A96934786CA5A0514A3B657021C12542E215E94B78FDCC74BFEFFE3D3'
+[20:41:05.418] Melon Assembly loaded: '.\UserLibs\System.Security.AccessControl.dll'
+[20:41:05.418] SHA256 Hash: '93084849C17A21F641C13C9F17545CFE18C1EC097561F3F0EBBBE26F358BA120'
+[20:41:05.419] Melon Assembly loaded: '.\UserLibs\System.Security.Principal.Windows.dll'
+[20:41:05.419] SHA256 Hash: '7828DFD952A9FD49404477BAFF714849177D9F18C0654ADAFADBDCAFB4B21F47'
+[20:41:05.442] Melon Assembly loaded: '.\UserLibs\UniverseLib.Mono.dll'
+[20:41:05.442] SHA256 Hash: '3B10913FFEAC9A0744583F0BB18218A5CFAFCBA467A7F9F99FA731E801A5A880'
+[20:41:05.443] ------------------------------
+[20:41:05.443] 0 UserLibs loaded.
+
+[20:41:05.443] Loading Plugins...
+[20:41:05.445] 0 Plugins loaded.
+
+
+[20:41:06.221] Loading Mods...
+[20:41:06.246] ------------------------------
+[20:41:06.247] Melon Assembly loaded: '.\Mods\FrameStats.dll'
+[20:41:06.247] SHA256 Hash: '601E73AA34A5384BC3E4F823068E1DEA82BC90B73904CB1EB68E57134BE12D2F'
+[20:41:06.263] Melon Assembly loaded: '.\Mods\UnityExplorer.ML.Mono.dll'
+[20:41:06.263] SHA256 Hash: '7E6C95C5F0DB2D6B22F506AAD4D268A96250BD64D8E259B7E4073106250F36D2'
+
+[20:41:06.291] ------------------------------
+[20:41:06.291] FrameStats v1.0.0
+[20:41:06.291] by oneshade
+[20:41:06.291] Assembly: FrameStats.dll
+[20:41:06.291] ------------------------------
+[20:41:06.293] ------------------------------
+[20:41:06.293] UnityExplorer v4.9.0
+[20:41:06.293] by Sinai
+[20:41:06.293] Assembly: UnityExplorer.ML.Mono.dll
+[20:41:06.294] ------------------------------
+[20:41:06.294] ------------------------------
+[20:41:06.294] 2 Mods loaded.
+
+[20:41:06.299] Support Module Loaded: C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\MelonLoader\Dependencies\SupportModules\Mono.dll
+[20:41:06.312] [UnityExplorer] UnityExplorer 4.9.0 initializing...
+[20:41:06.330] [UnityExplorer] [UniverseLib] UniverseLib 1.5.1 initializing...
+[20:41:06.687] [UnityExplorer] [UniverseLib] Finished UniverseLib initial setup.
+[20:41:06.692] [UnityExplorer] Initialized UnityCrashPrevention for: Canvas.get_renderingDisplaySize
+[20:41:08.964] [FrameStats] scene MainMenu loaded, index 0
+[20:41:09.500] [FrameStats] Loading asset bundle ui...
+[20:41:09.503] [FrameStats]     Loaded asset FrameStatsPanel
+[20:41:09.504] [FrameStats]     Loaded asset FrameStatsSettings
+[20:41:11.795] [FrameStats] Hardware: Intel Core i9-14900HX
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #1 Thread #1, value: 11.13958
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #1 Thread #2, value: 0
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #2 Thread #1, value: 0.4554212
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #2 Thread #2, value: 0.2866566
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #3 Thread #1, value: 0
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #3 Thread #2, value: 20.51194
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #4 Thread #1, value: 0
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #4 Thread #2, value: 0
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #5 Thread #1, value: 0
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #5 Thread #2, value: 47.67052
+[20:41:11.798] [FrameStats]     Sensor: CPU Core #6 Thread #1, value: 41.43821
+[20:41:11.799] [FrameStats]     Sensor: CPU Core #6 Thread #2, value: 0
+[20:41:11.799] [FrameStats]     Sensor: CPU Core #7 Thread #1, value: 0
+[20:41:11.799] [FrameStats]     Sensor: CPU Core #7 Thread #2, value: 9.376639
+[20:41:11.799] [FrameStats]     Sensor: CPU Core #8 Thread #1, value: 0
+[20:41:11.799] [FrameStats]     Sensor: CPU Core #8 Thread #2, value: 9.367794
+[20:41:11.799] [FrameStats]     Sensor: CPU Core #9, value: 0
+[20:41:11.799] [FrameStats]     Sensor: CPU Core #10, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #11, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #12, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #13, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #14, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #15, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #16, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #17, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #18, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #19, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #20, value: 0
+[20:41:11.800] [FrameStats]     Sensor: CPU Core #21, value: 0
+[20:41:11.801] [FrameStats]     Sensor: CPU Core #22, value: 0
+[20:41:11.801] [FrameStats]     Sensor: CPU Core #23, value: 0
+[20:41:11.801] [FrameStats]     Sensor: CPU Core #24, value: 0
+[20:41:11.801] [FrameStats]     Sensor: CPU Total, value: 0
+[20:41:11.801] [FrameStats]     Sensor: CPU Core Max, value: 47.67052
+[20:41:11.801] [FrameStats]     Sensor: Core Max, value: 
+[20:41:11.801] [FrameStats]     Sensor: Core Average, value: 
+[20:41:11.801] [FrameStats]     Sensor: CPU Core #1, value: 
+[20:41:11.801] [FrameStats]     Sensor: CPU Core #2, value: 
+[20:41:11.801] [FrameStats]     Sensor: CPU Core #3, value: 
+[20:41:11.801] [FrameStats]     Sensor: CPU Core #4, value: 
+[20:41:11.801] [FrameStats]     Sensor: CPU Core #5, value: 
+[20:41:11.801] [FrameStats]     Sensor: CPU Core #6, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #7, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #8, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #9, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #10, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #11, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #12, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #13, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #14, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #15, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #16, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #17, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #18, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #19, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #20, value: 
+[20:41:11.802] [FrameStats]     Sensor: CPU Core #21, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #22, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #23, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #24, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Package, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #1 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #2 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #3 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #4 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #5 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #6 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #7 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #8 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #9 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #10 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #11 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #12 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #13 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #14 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #15 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #16 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #17 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #18 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #19 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #20 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #21 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #22 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #23 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #24 Distance to TjMax, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #1, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #2, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #3, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #4, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #5, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #6, value: 
+[20:41:11.803] [FrameStats]     Sensor: CPU Core #7, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #8, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #9, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #10, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #11, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #12, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #13, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #14, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #15, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #16, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #17, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #18, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #19, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #20, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #21, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #22, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #23, value: 
+[20:41:11.804] [FrameStats]     Sensor: CPU Core #24, value: 
+[20:41:11.804] [FrameStats] Hardware: Generic Memory
+[20:41:11.804] [FrameStats]     Sensor: Memory Used, value: 20.34513
+[20:41:11.804] [FrameStats]     Sensor: Memory Available, value: 11.36958
+[20:41:11.804] [FrameStats]     Sensor: Memory, value: 64.15044
+[20:41:11.804] [FrameStats]     Sensor: Virtual Memory Used, value: 39.52423
+[20:41:11.804] [FrameStats]     Sensor: Virtual Memory Available, value: 6.654175
+[20:41:11.804] [FrameStats]     Sensor: Virtual Memory, value: 85.59029
+[20:41:11.804] [FrameStats] Hardware: NVIDIA GeForce RTX 4070 Laptop GPU
+[20:41:11.804] [FrameStats]     Sensor: GPU Core, value: 50
+[20:41:11.804] [FrameStats]     Sensor: GPU Core, value: 555
+[20:41:11.804] [FrameStats]     Sensor: GPU Memory, value: 810
+[20:41:11.804] [FrameStats]     Sensor: GPU Core, value: 0
+[20:41:11.804] [FrameStats]     Sensor: GPU Memory Controller, value: 1
+[20:41:11.804] [FrameStats]     Sensor: GPU Video Engine, value: 8
+[20:41:11.804] [FrameStats]     Sensor: GPU Bus, value: 0
+[20:41:11.804] [FrameStats]     Sensor: D3D Dedicated Memory Used, value: 564.5352
+[20:41:11.804] [FrameStats]     Sensor: D3D Shared Memory Used, value: 185.1914
+[20:41:11.804] [FrameStats]     Sensor: D3D 3D, value: 0
+[20:41:11.804] [FrameStats]     Sensor: D3D Overlay, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Video Decode, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Copy, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Copy, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Security, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Video Encode, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Video Processing, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D VR, value: 0
+[20:41:11.805] [FrameStats]     Sensor: GPU Hot Spot, value: 57.03125
+[20:41:11.805] [FrameStats]     Sensor: GPU Memory Total, value: 8188
+[20:41:11.805] [FrameStats]     Sensor: GPU Memory Free, value: 7389
+[20:41:11.805] [FrameStats]     Sensor: GPU Memory Used, value: 798
+[20:41:11.805] [FrameStats]     Sensor: GPU Memory, value: 9.75637
+[20:41:11.805] [FrameStats]     Sensor: GPU Package, value: 15.893
+[20:41:11.805] [FrameStats]     Sensor: GPU PCIe Rx, value: 0
+[20:41:11.805] [FrameStats]     Sensor: GPU PCIe Tx, value: 0
+[20:41:11.805] [FrameStats] Hardware: Intel(R) UHD Graphics
+[20:41:11.805] [FrameStats]     Sensor: D3D Shared Memory Total, value: 16237.93
+[20:41:11.805] [FrameStats]     Sensor: D3D Shared Memory Free, value: 
+[20:41:11.805] [FrameStats]     Sensor: D3D Shared Memory Used, value: 1629.059
+[20:41:11.805] [FrameStats]     Sensor: D3D 3D, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Video Decode, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Copy, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Video Processing, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Video Decode, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Other, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Other, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Other, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Other, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D Other, value: 0
+[20:41:11.805] [FrameStats]     Sensor: D3D GDI Render, value: 0
+[20:41:11.806] [FrameStats]     Sensor: D3D Other, value: 0
+[20:41:11.806] [FrameStats]     Sensor: D3D Other, value: 0
+[20:41:11.806] [FrameStats] Hardware: L23M4PC3 
+[20:41:11.806] [FrameStats]     Sensor: Designed Capacity, value: 99900
+[20:41:11.806] [FrameStats]     Sensor: Fully-Charged Capacity, value: 94430
+[20:41:11.806] [FrameStats]     Sensor: Degradation Level, value: 5.475475
+[20:41:11.806] [FrameStats]     Sensor: Remaining Capacity, value: 94090
+[20:41:11.806] [FrameStats]     Sensor: Charge Level, value: 99.63995
+[20:41:11.806] [FrameStats]     Sensor: Voltage, value: 17.451
+[20:41:11.806] [FrameStats]     Sensor: Charge/Discharge Current, value: 0
+[20:41:11.806] [FrameStats]     Sensor: Charge/Discharge Rate, value: 0
+[20:41:12.902] [UnityExplorer] [UniverseLib] Initialized new InputSystem support.
+[20:41:12.955] [UnityExplorer] [UniverseLib] Loaded modern bundle for Unity 2022.3.11f1
+[20:41:12.972] [UnityExplorer] [UniverseLib] UniverseLib 1.5.1 initialized.
+[20:41:12.973] [UnityExplorer] Creating UI...
+[20:41:13.451] [UnityExplorer] UnityExplorer 4.9.0 (Mono) initialized.
+[20:41:13.538] [FrameStats] have options menu
+[20:41:13.539] [FrameStats] localScale: (1.00, 1.00, 1.00)
+[20:41:13.540] [FrameStats] added stats setting option
+[20:48:09.609] Preferences Saved!

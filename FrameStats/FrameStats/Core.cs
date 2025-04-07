@@ -1,7 +1,7 @@
 ﻿using MelonLoader;
 using LibreHardwareMonitor.Hardware;
-using UnityEngine;
 using UI.Common.Options;
+using UnityEngine;
 
 [assembly: MelonInfo(typeof(FrameStats.Core), "FrameStats", "1.0.0", "oneshade", null)]
 [assembly: MelonGame("CuriousOwlGames", "StellarDrive")]
@@ -94,8 +94,11 @@ namespace FrameStats {
                 return;
             }
 
+            frameStatsSettings.name = "FrameStats";
             frameStatsSettings.AddComponent<FrameStatsSettings>();
             frameStatsSettings.transform.SetParent(_optionsMenu.transform);
+            frameStatsSettings.transform.localScale = Vector3.one;
+
             Melon<Core>.Logger.Msg("added stats setting option");
         }
     }
