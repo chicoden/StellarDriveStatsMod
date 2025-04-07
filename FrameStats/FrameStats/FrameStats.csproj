@@ -8,11 +8,11 @@
 		<IsPackable>false</IsPackable>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
-    <NeutralLanguage>en-US</NeutralLanguage>
+		<NeutralLanguage>en-US</NeutralLanguage>
 		<AssemblyName>FrameStats</AssemblyName>
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -431,7 +431,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Compile Include="AssetLoader.cs" />
 		<Compile Include="Core.cs" />
+		<Compile Include="FrameStatsSettings.cs" />
 		<Compile Include="HardwareUpdateVisitor.cs" />
 	</ItemGroup>
 
@@ -440,7 +442,7 @@
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-	  <Exec Command="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)..\StellarDrive_0.6.5\Mods&quot;" />
-    <Exec Command="py &quot;$(ProjectDir)copy_userlibs.py&quot;" />
+		<Exec Command="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)..\StellarDrive_0.6.5\Mods&quot;" />
+		<Exec Command="py &quot;$(ProjectDir)copy_userlibs.py&quot;" />
   </Target>
 </Project>

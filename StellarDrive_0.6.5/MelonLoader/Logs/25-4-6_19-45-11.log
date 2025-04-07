@@ -1,0 +1,614 @@
+
+[19:45:11.246] ------------------------------
+[19:45:11.268] MelonLoader v0.7.0 Open-Beta
+[19:45:11.269] OS: Windows 11
+[19:45:11.269] Hash Code: F2DCA88FB1569FD6750096CED35BBB808C50BA273E0D295347A24385B0B764CA
+[19:45:11.270] ------------------------------
+[19:45:11.271] Game Type: MonoBleedingEdge
+[19:45:11.271] Game Arch: x64
+[19:45:11.271] ------------------------------
+[19:45:11.271] Command-Line: 
+[19:45:11.271] ------------------------------
+[19:45:11.272] Core::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[19:45:11.272] Game::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[19:45:11.273] Game::DataPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive_Data
+[19:45:11.273] Game::ApplicationPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive.exe
+[19:45:11.273] Runtime Type: net35
+[19:45:11.343] ------------------------------
+[19:45:11.343] Game Name: StellarDrive
+[19:45:11.343] Game Developer: CuriousOwlGames
+[19:45:11.345] Unity Version: 2022.3.11f1
+[19:45:11.345] Game Version: UNKNOWN
+[19:45:11.345] ------------------------------
+
+[19:45:11.604] Preferences Loaded!
+
+[19:45:11.624] Loading UserLibs...
+[19:45:11.736] ------------------------------
+[19:45:11.740] Melon Assembly loaded: '.\UserLibs\HidSharp.dll'
+[19:45:11.741] SHA256 Hash: '61EB2E22A5620D789A23D389F1AF9D38FAFF4D85F46ADEDBC28FB22CFEC61BF9'
+[19:45:11.747] Melon Assembly loaded: '.\UserLibs\LibreHardwareMonitorLib.dll'
+[19:45:11.747] SHA256 Hash: '99B39B0B0AC865C38A33DFF7DEE080FF17AAC3337B2332812CA2D7BB13C89460'
+[19:45:11.748] Melon Assembly loaded: '.\UserLibs\Microsoft.Win32.Registry.dll'
+[19:45:11.748] SHA256 Hash: 'D641EB0065BD5CDB541C5BF0D2FF976720D35D62416AB959727651ABF0ABA2CA'
+[19:45:11.749] Melon Assembly loaded: '.\UserLibs\System.Buffers.dll'
+[19:45:11.749] SHA256 Hash: 'C65FFF603B283DC966D1A8B730C11D5E5E750E8021BD24640612F6CC3F2C6FB7'
+[19:45:11.751] Melon Assembly loaded: '.\UserLibs\System.CodeDom.dll'
+[19:45:11.751] SHA256 Hash: 'CF18C822A341A3932FC8C08D7F21BF015F7E3C2696619560C94B63629341376A'
+[19:45:11.752] Melon Assembly loaded: '.\UserLibs\System.IO.FileSystem.AccessControl.dll'
+[19:45:11.753] SHA256 Hash: 'D2D6CD3FEF822959B68A68A6AF6096963BBE6493D90E16F0AF65FEDE25D85F32'
+[19:45:11.754] Melon Assembly loaded: '.\UserLibs\System.IO.Ports.dll'
+[19:45:11.755] SHA256 Hash: 'B1ECEF838C8B833BE76D1EF75AD8A0B1FAD805FC951136C9E5256FD3CF15FC1B'
+[19:45:11.757] Melon Assembly loaded: '.\UserLibs\System.Management.dll'
+[19:45:11.757] SHA256 Hash: '205BF789DD38D8ABC5FDC9CD8653469400ED9D6386B07384609848B9C95D7721'
+[19:45:11.759] Melon Assembly loaded: '.\UserLibs\System.Memory.dll'
+[19:45:11.759] SHA256 Hash: 'D2E3949FCF3A3B3A20BB9A568A4DA582D9A90D64F34C0BDC07C9029BFE8F1858'
+[19:45:11.761] Melon Assembly loaded: '.\UserLibs\System.Numerics.Vectors.dll'
+[19:45:11.762] SHA256 Hash: '2324EE5A35674269225E2AA20957CE8830DBCA0CFFB918BD593F7A3222DEE480'
+[19:45:11.762] Melon Assembly loaded: '.\UserLibs\System.Runtime.CompilerServices.Unsafe.dll'
+[19:45:11.762] SHA256 Hash: 'BFC8F02A96934786CA5A0514A3B657021C12542E215E94B78FDCC74BFEFFE3D3'
+[19:45:11.764] Melon Assembly loaded: '.\UserLibs\System.Security.AccessControl.dll'
+[19:45:11.764] SHA256 Hash: '93084849C17A21F641C13C9F17545CFE18C1EC097561F3F0EBBBE26F358BA120'
+[19:45:11.765] Melon Assembly loaded: '.\UserLibs\System.Security.Principal.Windows.dll'
+[19:45:11.765] SHA256 Hash: '7828DFD952A9FD49404477BAFF714849177D9F18C0654ADAFADBDCAFB4B21F47'
+[19:45:11.788] Melon Assembly loaded: '.\UserLibs\UniverseLib.Mono.dll'
+[19:45:11.788] SHA256 Hash: '3B10913FFEAC9A0744583F0BB18218A5CFAFCBA467A7F9F99FA731E801A5A880'
+[19:45:11.789] ------------------------------
+[19:45:11.789] 0 UserLibs loaded.
+
+[19:45:11.789] Loading Plugins...
+[19:45:11.791] 0 Plugins loaded.
+
+
+[19:45:12.573] Loading Mods...
+[19:45:12.601] ------------------------------
+[19:45:12.602] Melon Assembly loaded: '.\Mods\FrameStats.dll'
+[19:45:12.602] SHA256 Hash: '97C48D7F6CEC6EFA099708A848CAB9BF57EEAB56B4A9A96DE45493D8BB3BCAFE'
+[19:45:12.618] Melon Assembly loaded: '.\Mods\UnityExplorer.ML.Mono.dll'
+[19:45:12.619] SHA256 Hash: '7E6C95C5F0DB2D6B22F506AAD4D268A96250BD64D8E259B7E4073106250F36D2'
+
+[19:45:12.648] ------------------------------
+[19:45:12.649] FrameStats v1.0.0
+[19:45:12.649] by oneshade
+[19:45:12.649] Assembly: FrameStats.dll
+[19:45:12.650] ------------------------------
+[19:45:12.652] ------------------------------
+[19:45:12.652] UnityExplorer v4.9.0
+[19:45:12.652] by Sinai
+[19:45:12.652] Assembly: UnityExplorer.ML.Mono.dll
+[19:45:12.652] ------------------------------
+[19:45:12.653] ------------------------------
+[19:45:12.653] 2 Mods loaded.
+
+[19:45:12.658] Support Module Loaded: C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\MelonLoader\Dependencies\SupportModules\Mono.dll
+[19:45:12.670] [UnityExplorer] UnityExplorer 4.9.0 initializing...
+[19:45:12.689] [UnityExplorer] [UniverseLib] UniverseLib 1.5.1 initializing...
+[19:45:13.061] [UnityExplorer] [UniverseLib] Finished UniverseLib initial setup.
+[19:45:13.067] [UnityExplorer] Initialized UnityCrashPrevention for: Canvas.get_renderingDisplaySize
+[19:45:15.346] [FrameStats] scene MainMenu loaded, index 0
+[19:45:15.878] [FrameStats] Loading asset bundle ui...
+[19:45:15.882] [FrameStats]     Loaded asset FrameStatsPanel
+[19:45:15.882] [FrameStats]     Loaded asset FrameStatsSettings
+[19:45:18.212] [FrameStats] Hardware: Intel Core i9-14900HX
+[19:45:18.214] [FrameStats]     Sensor: CPU Core #1 Thread #1, value: 9.044248
+[19:45:18.214] [FrameStats]     Sensor: CPU Core #1 Thread #2, value: 0
+[19:45:18.214] [FrameStats]     Sensor: CPU Core #2 Thread #1, value: 26.14406
+[19:45:18.214] [FrameStats]     Sensor: CPU Core #2 Thread #2, value: 0
+[19:45:18.214] [FrameStats]     Sensor: CPU Core #3 Thread #1, value: 0
+[19:45:18.214] [FrameStats]     Sensor: CPU Core #3 Thread #2, value: 0
+[19:45:18.214] [FrameStats]     Sensor: CPU Core #4 Thread #1, value: 0
+[19:45:18.214] [FrameStats]     Sensor: CPU Core #4 Thread #2, value: 15.41952
+[19:45:18.214] [FrameStats]     Sensor: CPU Core #5 Thread #1, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #5 Thread #2, value: 17.34109
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #6 Thread #1, value: 60.63802
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #6 Thread #2, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #7 Thread #1, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #7 Thread #2, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #8 Thread #1, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #8 Thread #2, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #9, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #10, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #11, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #12, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #13, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #14, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #15, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #16, value: 0
+[19:45:18.215] [FrameStats]     Sensor: CPU Core #17, value: 0
+[19:45:18.216] [FrameStats]     Sensor: CPU Core #18, value: 0
+[19:45:18.216] [FrameStats]     Sensor: CPU Core #19, value: 0
+[19:45:18.216] [FrameStats]     Sensor: CPU Core #20, value: 0
+[19:45:18.216] [FrameStats]     Sensor: CPU Core #21, value: 0
+[19:45:18.216] [FrameStats]     Sensor: CPU Core #22, value: 0
+[19:45:18.216] [FrameStats]     Sensor: CPU Core #23, value: 0
+[19:45:18.216] [FrameStats]     Sensor: CPU Core #24, value: 0
+[19:45:18.216] [FrameStats]     Sensor: CPU Total, value: 0
+[19:45:18.216] [FrameStats]     Sensor: CPU Core Max, value: 60.63802
+[19:45:18.216] [FrameStats]     Sensor: Core Max, value: 
+[19:45:18.216] [FrameStats]     Sensor: Core Average, value: 
+[19:45:18.216] [FrameStats]     Sensor: CPU Core #1, value: 
+[19:45:18.216] [FrameStats]     Sensor: CPU Core #2, value: 
+[19:45:18.217] [FrameStats]     Sensor: CPU Core #3, value: 
+[19:45:18.218] [FrameStats]     Sensor: CPU Core #4, value: 
+[19:45:18.218] [FrameStats]     Sensor: CPU Core #5, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #6, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #7, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #8, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #9, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #10, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #11, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #12, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #13, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #14, value: 
+[19:45:18.226] [FrameStats]     Sensor: CPU Core #15, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #16, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #17, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #18, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #19, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #20, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #21, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #22, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #23, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #24, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Package, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #1 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #2 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #3 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #4 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #5 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #6 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #7 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #8 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #9 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #10 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #11 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #12 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #13 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #14 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #15 Distance to TjMax, value: 
+[19:45:18.227] [FrameStats]     Sensor: CPU Core #16 Distance to TjMax, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #17 Distance to TjMax, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #18 Distance to TjMax, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #19 Distance to TjMax, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #20 Distance to TjMax, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #21 Distance to TjMax, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #22 Distance to TjMax, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #23 Distance to TjMax, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #24 Distance to TjMax, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #1, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #2, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #3, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #4, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #5, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #6, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #7, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #8, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #9, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #10, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #11, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #12, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #13, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #14, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #15, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #16, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #17, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #18, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #19, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #20, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #21, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #22, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #23, value: 
+[19:45:18.228] [FrameStats]     Sensor: CPU Core #24, value: 
+[19:45:18.228] [FrameStats] Hardware: Generic Memory
+[19:45:18.228] [FrameStats]     Sensor: Memory Used, value: 20.40246
+[19:45:18.228] [FrameStats]     Sensor: Memory Available, value: 11.31226
+[19:45:18.229] [FrameStats]     Sensor: Memory, value: 64.33121
+[19:45:18.229] [FrameStats]     Sensor: Virtual Memory Used, value: 39.22815
+[19:45:18.229] [FrameStats]     Sensor: Virtual Memory Available, value: 6.950256
+[19:45:18.229] [FrameStats]     Sensor: Virtual Memory, value: 84.94912
+[19:45:18.229] [FrameStats] Hardware: NVIDIA GeForce RTX 4070 Laptop GPU
+[19:45:18.229] [FrameStats]     Sensor: GPU Core, value: 48
+[19:45:18.229] [FrameStats]     Sensor: GPU Core, value: 465
+[19:45:18.229] [FrameStats]     Sensor: GPU Memory, value: 810
+[19:45:18.229] [FrameStats]     Sensor: GPU Core, value: 0
+[19:45:18.229] [FrameStats]     Sensor: GPU Memory Controller, value: 0
+[19:45:18.229] [FrameStats]     Sensor: GPU Video Engine, value: 10
+[19:45:18.229] [FrameStats]     Sensor: GPU Bus, value: 0
+[19:45:18.229] [FrameStats]     Sensor: D3D Dedicated Memory Used, value: 610.75
+[19:45:18.229] [FrameStats]     Sensor: D3D Shared Memory Used, value: 190.5039
+[19:45:18.229] [FrameStats]     Sensor: D3D 3D, value: 0
+[19:45:18.229] [FrameStats]     Sensor: D3D Overlay, value: 0
+[19:45:18.229] [FrameStats]     Sensor: D3D Video Decode, value: 0
+[19:45:18.229] [FrameStats]     Sensor: D3D Copy, value: 0
+[19:45:18.229] [FrameStats]     Sensor: D3D Copy, value: 0
+[19:45:18.229] [FrameStats]     Sensor: D3D Security, value: 0
+[19:45:18.229] [FrameStats]     Sensor: D3D Video Encode, value: 0
+[19:45:18.229] [FrameStats]     Sensor: D3D Video Processing, value: 0
+[19:45:18.229] [FrameStats]     Sensor: D3D VR, value: 0
+[19:45:18.229] [FrameStats]     Sensor: GPU Hot Spot, value: 55.1875
+[19:45:18.229] [FrameStats]     Sensor: GPU Memory Total, value: 8188
+[19:45:18.229] [FrameStats]     Sensor: GPU Memory Free, value: 7343
+[19:45:18.229] [FrameStats]     Sensor: GPU Memory Used, value: 844
+[19:45:18.229] [FrameStats]     Sensor: GPU Memory, value: 10.31969
+[19:45:18.230] [FrameStats]     Sensor: GPU Package, value: 6.502
+[19:45:18.230] [FrameStats]     Sensor: GPU PCIe Rx, value: 1024
+[19:45:18.230] [FrameStats]     Sensor: GPU PCIe Tx, value: 0
+[19:45:18.230] [FrameStats] Hardware: Intel(R) UHD Graphics
+[19:45:18.230] [FrameStats]     Sensor: D3D Shared Memory Total, value: 16237.93
+[19:45:18.230] [FrameStats]     Sensor: D3D Shared Memory Free, value: 
+[19:45:18.230] [FrameStats]     Sensor: D3D Shared Memory Used, value: 1641.438
+[19:45:18.230] [FrameStats]     Sensor: D3D 3D, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Video Decode, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Copy, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Video Processing, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Video Decode, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Other, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Other, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Other, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Other, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Other, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D GDI Render, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Other, value: 0
+[19:45:18.230] [FrameStats]     Sensor: D3D Other, value: 0
+[19:45:18.230] [FrameStats] Hardware: L23M4PC3 
+[19:45:18.230] [FrameStats]     Sensor: Designed Capacity, value: 99900
+[19:45:18.230] [FrameStats]     Sensor: Fully-Charged Capacity, value: 94430
+[19:45:18.230] [FrameStats]     Sensor: Degradation Level, value: 5.475475
+[19:45:18.230] [FrameStats]     Sensor: Remaining Capacity, value: 94090
+[19:45:18.230] [FrameStats]     Sensor: Charge Level, value: 99.63995
+[19:45:18.230] [FrameStats]     Sensor: Voltage, value: 17.454
+[19:45:18.230] [FrameStats]     Sensor: Charge/Discharge Current, value: 0
+[19:45:18.230] [FrameStats]     Sensor: Charge/Discharge Rate, value: 0
+[19:45:19.329] [UnityExplorer] [UniverseLib] Initialized new InputSystem support.
+[19:45:19.385] [UnityExplorer] [UniverseLib] Loaded modern bundle for Unity 2022.3.11f1
+[19:45:19.402] [UnityExplorer] [UniverseLib] UniverseLib 1.5.1 initialized.
+[19:45:19.403] [UnityExplorer] Creating UI...
+[19:45:19.899] [UnityExplorer] UnityExplorer 4.9.0 (Mono) initialized.
+[19:45:31.020] [FrameStats] have options menu
+[19:45:31.021] [FrameStats] added stats setting option
+[19:45:32.696] [FrameStats] lost options menu
+[19:45:34.808] [FrameStats] have options menu
+[19:45:34.808] [FrameStats] added stats setting option
+[19:45:36.043] [FrameStats] lost options menu
+[19:45:36.766] [FrameStats] have options menu
+[19:45:36.767] [FrameStats] added stats setting option
+[19:45:41.538] [FrameStats] lost options menu
+[19:45:45.633] [FrameStats] scene MainGame loaded, index 1
+[19:45:45.870] [FrameStats] hello from performance monitor
+[19:45:45.929] [FrameStats] hello from performance monitor
+[19:45:45.967] [FrameStats] hello from performance monitor
+[19:45:45.982] [FrameStats] hello from performance monitor
+[19:45:45.988] [FrameStats] hello from performance monitor
+[19:45:46.088] [FrameStats] hello from performance monitor
+[19:45:46.088] [FrameStats] hello from performance monitor
+[19:45:46.089] [FrameStats] hello from performance monitor
+[19:45:46.089] [FrameStats] hello from performance monitor
+[19:45:46.238] [FrameStats] hello from performance monitor
+[19:45:47.129] [FrameStats] hello from performance monitor
+[19:45:47.129] [FrameStats] hello from performance monitor
+[19:45:47.129] [FrameStats] hello from performance monitor
+[19:45:47.129] [FrameStats] hello from performance monitor
+[19:45:47.130] [FrameStats] hello from performance monitor
+[19:45:47.130] [FrameStats] hello from performance monitor
+[19:45:47.130] [FrameStats] hello from performance monitor
+[19:45:47.893] [FrameStats] hello from performance monitor
+[19:45:47.894] [FrameStats] hello from performance monitor
+[19:45:47.895] [FrameStats] hello from performance monitor
+[19:45:47.895] [FrameStats] hello from performance monitor
+[19:45:47.895] [FrameStats] hello from performance monitor
+[19:45:47.895] [FrameStats] hello from performance monitor
+[19:45:47.895] [FrameStats] hello from performance monitor
+[19:45:47.895] [FrameStats] hello from performance monitor
+[19:45:47.895] [FrameStats] hello from performance monitor
+[19:45:47.896] [FrameStats] hello from performance monitor
+[19:45:47.896] [FrameStats] hello from performance monitor
+[19:45:47.896] [FrameStats] hello from performance monitor
+[19:45:47.896] [FrameStats] hello from performance monitor
+[19:45:47.896] [FrameStats] hello from performance monitor
+[19:45:47.896] [FrameStats] hello from performance monitor
+[19:45:47.896] [FrameStats] hello from performance monitor
+[19:45:47.896] [FrameStats] hello from performance monitor
+[19:45:48.042] [FrameStats] hello from performance monitor
+[19:45:48.042] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.043] [FrameStats] hello from performance monitor
+[19:45:48.096] [FrameStats] hello from performance monitor
+[19:45:48.096] [FrameStats] hello from performance monitor
+[19:45:48.141] [FrameStats] hello from performance monitor
+[19:45:48.141] [FrameStats] hello from performance monitor
+[19:45:48.142] [FrameStats] hello from performance monitor
+[19:45:48.164] [FrameStats] hello from performance monitor
+[19:45:48.173] [FrameStats] hello from performance monitor
+[19:45:48.184] [FrameStats] hello from performance monitor
+[19:45:48.209] [FrameStats] hello from performance monitor
+[19:45:48.230] [FrameStats] hello from performance monitor
+[19:45:48.246] [FrameStats] hello from performance monitor
+[19:45:48.263] [FrameStats] hello from performance monitor
+[19:45:48.288] [FrameStats] hello from performance monitor
+[19:45:48.304] [FrameStats] hello from performance monitor
+[19:45:48.326] [FrameStats] hello from performance monitor
+[19:45:48.342] [FrameStats] hello from performance monitor
+[19:45:48.367] [FrameStats] hello from performance monitor
+[19:45:48.384] [FrameStats] hello from performance monitor
+[19:45:48.409] [FrameStats] hello from performance monitor
+[19:45:48.425] [FrameStats] hello from performance monitor
+[19:45:48.442] [FrameStats] hello from performance monitor
+[19:45:48.468] [FrameStats] hello from performance monitor
+[19:45:48.484] [FrameStats] hello from performance monitor
+[19:45:48.509] [FrameStats] hello from performance monitor
+[19:45:48.526] [FrameStats] hello from performance monitor
+[19:45:48.542] [FrameStats] hello from performance monitor
+[19:45:48.567] [FrameStats] hello from performance monitor
+[19:45:48.584] [FrameStats] hello from performance monitor
+[19:45:48.609] [FrameStats] hello from performance monitor
+[19:45:48.626] [FrameStats] hello from performance monitor
+[19:45:48.642] [FrameStats] hello from performance monitor
+[19:45:48.667] [FrameStats] hello from performance monitor
+[19:45:48.684] [FrameStats] hello from performance monitor
+[19:45:48.709] [FrameStats] hello from performance monitor
+[19:45:48.725] [FrameStats] hello from performance monitor
+[19:45:48.742] [FrameStats] hello from performance monitor
+[19:45:48.764] [FrameStats] hello from performance monitor
+[19:45:48.788] [FrameStats] hello from performance monitor
+[19:45:48.804] [FrameStats] hello from performance monitor
+[19:45:48.821] [FrameStats] hello from performance monitor
+[19:45:48.842] [FrameStats] hello from performance monitor
+[19:45:48.864] [FrameStats] hello from performance monitor
+[19:45:48.887] [FrameStats] hello from performance monitor
+[19:45:48.904] [FrameStats] hello from performance monitor
+[19:45:48.921] [FrameStats] hello from performance monitor
+[19:45:48.943] [FrameStats] hello from performance monitor
+[19:45:48.964] [FrameStats] hello from performance monitor
+[19:45:48.989] [FrameStats] hello from performance monitor
+[19:45:49.005] [FrameStats] hello from performance monitor
+[19:45:49.022] [FrameStats] hello from performance monitor
+[19:45:49.043] [FrameStats] hello from performance monitor
+[19:45:49.067] [FrameStats] hello from performance monitor
+[19:45:49.084] [FrameStats] hello from performance monitor
+[19:45:49.106] [FrameStats] hello from performance monitor
+[19:45:49.121] [FrameStats] hello from performance monitor
+[19:45:49.156] [FrameStats] hello from performance monitor
+[19:45:49.165] [FrameStats] hello from performance monitor
+[19:45:49.184] [FrameStats] hello from performance monitor
+[19:45:49.206] [FrameStats] hello from performance monitor
+[19:45:49.226] [FrameStats] hello from performance monitor
+[19:45:49.242] [FrameStats] hello from performance monitor
+[19:45:49.267] [FrameStats] hello from performance monitor
+[19:45:49.284] [FrameStats] hello from performance monitor
+[19:45:49.309] [FrameStats] hello from performance monitor
+[19:45:49.325] [FrameStats] hello from performance monitor
+[19:45:49.342] [FrameStats] hello from performance monitor
+[19:45:49.367] [FrameStats] hello from performance monitor
+[19:45:49.384] [FrameStats] hello from performance monitor
+[19:45:49.409] [FrameStats] hello from performance monitor
+[19:45:49.426] [FrameStats] hello from performance monitor
+[19:45:49.442] [FrameStats] hello from performance monitor
+[19:45:49.467] [FrameStats] hello from performance monitor
+[19:45:49.483] [FrameStats] hello from performance monitor
+[19:45:49.508] [FrameStats] hello from performance monitor
+[19:45:49.525] [FrameStats] hello from performance monitor
+[19:45:49.542] [FrameStats] hello from performance monitor
+[19:45:49.562] [FrameStats] hello from performance monitor
+[19:45:49.583] [FrameStats] hello from performance monitor
+[19:45:49.606] [FrameStats] hello from performance monitor
+[19:45:49.625] [FrameStats] hello from performance monitor
+[19:45:49.642] [FrameStats] hello from performance monitor
+[19:45:49.663] [FrameStats] hello from performance monitor
+[19:45:49.688] [FrameStats] hello from performance monitor
+[19:45:49.704] [FrameStats] hello from performance monitor
+[19:45:49.721] [FrameStats] hello from performance monitor
+[19:45:49.746] [FrameStats] hello from performance monitor
+[19:45:49.763] [FrameStats] hello from performance monitor
+[19:45:49.784] [FrameStats] hello from performance monitor
+[19:45:49.813] [FrameStats] hello from performance monitor
+[19:45:49.829] [FrameStats] hello from performance monitor
+[19:45:49.846] [FrameStats] hello from performance monitor
+[19:45:49.863] [FrameStats] hello from performance monitor
+[19:45:49.888] [FrameStats] hello from performance monitor
+[19:45:49.904] [FrameStats] hello from performance monitor
+[19:45:49.921] [FrameStats] hello from performance monitor
+[19:45:49.946] [FrameStats] hello from performance monitor
+[19:45:49.963] [FrameStats] hello from performance monitor
+[19:45:49.988] [FrameStats] hello from performance monitor
+[19:45:50.004] [FrameStats] hello from performance monitor
+[19:45:50.021] [FrameStats] hello from performance monitor
+[19:45:50.046] [FrameStats] hello from performance monitor
+[19:45:50.063] [FrameStats] hello from performance monitor
+[19:45:50.088] [FrameStats] hello from performance monitor
+[19:45:50.104] [FrameStats] hello from performance monitor
+[19:45:50.121] [FrameStats] hello from performance monitor
+[19:45:50.146] [FrameStats] hello from performance monitor
+[19:45:50.163] [FrameStats] hello from performance monitor
+[19:45:50.188] [FrameStats] hello from performance monitor
+[19:45:50.205] [FrameStats] hello from performance monitor
+[19:45:50.221] [FrameStats] hello from performance monitor
+[19:45:50.246] [FrameStats] hello from performance monitor
+[19:45:50.263] [FrameStats] hello from performance monitor
+[19:45:50.288] [FrameStats] hello from performance monitor
+[19:45:50.304] [FrameStats] hello from performance monitor
+[19:45:50.321] [FrameStats] hello from performance monitor
+[19:45:50.346] [FrameStats] hello from performance monitor
+[19:45:50.363] [FrameStats] hello from performance monitor
+[19:45:50.387] [FrameStats] hello from performance monitor
+[19:45:50.405] [FrameStats] hello from performance monitor
+[19:45:50.421] [FrameStats] hello from performance monitor
+[19:45:50.446] [FrameStats] hello from performance monitor
+[19:45:50.462] [FrameStats] hello from performance monitor
+[19:45:50.484] [FrameStats] hello from performance monitor
+[19:45:50.504] [FrameStats] hello from performance monitor
+[19:45:50.521] [FrameStats] hello from performance monitor
+[19:45:50.546] [FrameStats] hello from performance monitor
+[19:45:50.562] [FrameStats] hello from performance monitor
+[19:45:50.584] [FrameStats] hello from performance monitor
+[19:45:50.604] [FrameStats] hello from performance monitor
+[19:45:50.621] [FrameStats] hello from performance monitor
+[19:45:50.642] [FrameStats] hello from performance monitor
+[19:45:50.666] [FrameStats] hello from performance monitor
+[19:45:50.683] [FrameStats] hello from performance monitor
+[19:45:50.708] [FrameStats] hello from performance monitor
+[19:45:50.725] [FrameStats] hello from performance monitor
+[19:45:50.742] [FrameStats] hello from performance monitor
+[19:45:50.765] [FrameStats] hello from performance monitor
+[19:45:50.784] [FrameStats] hello from performance monitor
+[19:45:50.805] [FrameStats] hello from performance monitor
+[19:45:50.821] [FrameStats] hello from performance monitor
+[19:45:50.843] [FrameStats] hello from performance monitor
+[19:45:50.871] [FrameStats] hello from performance monitor
+[19:45:50.889] [FrameStats] hello from performance monitor
+[19:45:50.910] [FrameStats] hello from performance monitor
+[19:45:50.925] [FrameStats] hello from performance monitor
+[19:45:50.942] [FrameStats] hello from performance monitor
+[19:45:50.967] [FrameStats] hello from performance monitor
+[19:45:50.984] [FrameStats] hello from performance monitor
+[19:45:51.008] [FrameStats] hello from performance monitor
+[19:45:51.025] [FrameStats] hello from performance monitor
+[19:45:51.043] [FrameStats] hello from performance monitor
+[19:45:51.072] [FrameStats] hello from performance monitor
+[19:45:51.093] [FrameStats] hello from performance monitor
+[19:45:51.109] [FrameStats] hello from performance monitor
+[19:45:51.125] [FrameStats] hello from performance monitor
+[19:45:51.142] [FrameStats] hello from performance monitor
+[19:45:51.167] [FrameStats] hello from performance monitor
+[19:45:51.184] [FrameStats] hello from performance monitor
+[19:45:51.209] [FrameStats] hello from performance monitor
+[19:45:51.225] [FrameStats] hello from performance monitor
+[19:45:51.242] [FrameStats] hello from performance monitor
+[19:45:51.267] [FrameStats] hello from performance monitor
+[19:45:51.284] [FrameStats] hello from performance monitor
+[19:45:51.309] [FrameStats] hello from performance monitor
+[19:45:51.325] [FrameStats] hello from performance monitor
+[19:45:51.342] [FrameStats] hello from performance monitor
+[19:45:51.367] [FrameStats] hello from performance monitor
+[19:45:51.383] [FrameStats] hello from performance monitor
+[19:45:51.409] [FrameStats] hello from performance monitor
+[19:45:51.425] [FrameStats] hello from performance monitor
+[19:45:51.442] [FrameStats] hello from performance monitor
+[19:45:51.467] [FrameStats] hello from performance monitor
+[19:45:51.484] [FrameStats] hello from performance monitor
+[19:45:51.509] [FrameStats] hello from performance monitor
+[19:45:51.525] [FrameStats] hello from performance monitor
+[19:45:51.542] [FrameStats] hello from performance monitor
+[19:45:51.567] [FrameStats] hello from performance monitor
+[19:45:51.583] [FrameStats] hello from performance monitor
+[19:45:51.608] [FrameStats] hello from performance monitor
+[19:45:51.625] [FrameStats] hello from performance monitor
+[19:45:51.641] [FrameStats] hello from performance monitor
+[19:45:51.667] [FrameStats] hello from performance monitor
+[19:45:51.683] [FrameStats] hello from performance monitor
+[19:45:51.708] [FrameStats] hello from performance monitor
+[19:45:51.725] [FrameStats] hello from performance monitor
+[19:45:51.742] [FrameStats] hello from performance monitor
+[19:45:51.766] [FrameStats] hello from performance monitor
+[19:45:52.864] [FrameStats] have options menu
+[19:45:52.865] [FrameStats] added stats setting option
+[19:45:56.403] [FrameStats] lost options menu
+[19:45:56.403] [FrameStats] hello from performance monitor
+[19:45:56.428] [FrameStats] hello from performance monitor
+[19:45:56.445] [FrameStats] hello from performance monitor
+[19:45:56.462] [FrameStats] hello from performance monitor
+[19:45:56.483] [FrameStats] hello from performance monitor
+[19:45:56.512] [FrameStats] hello from performance monitor
+[19:45:56.528] [FrameStats] hello from performance monitor
+[19:45:56.545] [FrameStats] hello from performance monitor
+[19:45:56.562] [FrameStats] hello from performance monitor
+[19:45:56.587] [FrameStats] hello from performance monitor
+[19:45:56.603] [FrameStats] hello from performance monitor
+[19:45:56.628] [FrameStats] hello from performance monitor
+[19:45:56.645] [FrameStats] hello from performance monitor
+[19:45:56.662] [FrameStats] hello from performance monitor
+[19:45:56.683] [FrameStats] hello from performance monitor
+[19:45:56.712] [FrameStats] hello from performance monitor
+[19:45:56.728] [FrameStats] hello from performance monitor
+[19:45:56.745] [FrameStats] hello from performance monitor
+[19:45:56.762] [FrameStats] hello from performance monitor
+[19:45:56.787] [FrameStats] hello from performance monitor
+[19:45:56.803] [FrameStats] hello from performance monitor
+[19:45:56.829] [FrameStats] hello from performance monitor
+[19:45:56.845] [FrameStats] hello from performance monitor
+[19:45:56.862] [FrameStats] hello from performance monitor
+[19:45:56.887] [FrameStats] hello from performance monitor
+[19:45:56.903] [FrameStats] hello from performance monitor
+[19:45:56.928] [FrameStats] hello from performance monitor
+[19:45:56.945] [FrameStats] hello from performance monitor
+[19:45:56.962] [FrameStats] hello from performance monitor
+[19:45:56.987] [FrameStats] hello from performance monitor
+[19:45:57.004] [FrameStats] hello from performance monitor
+[19:45:57.029] [FrameStats] hello from performance monitor
+[19:45:57.045] [FrameStats] hello from performance monitor
+[19:45:57.062] [FrameStats] hello from performance monitor
+[19:45:57.087] [FrameStats] hello from performance monitor
+[19:45:57.103] [FrameStats] hello from performance monitor
+[19:45:57.129] [FrameStats] hello from performance monitor
+[19:45:57.145] [FrameStats] hello from performance monitor
+[19:45:57.162] [FrameStats] hello from performance monitor
+[19:45:57.187] [FrameStats] hello from performance monitor
+[19:45:57.204] [FrameStats] hello from performance monitor
+[19:45:57.229] [FrameStats] hello from performance monitor
+[19:45:57.245] [FrameStats] hello from performance monitor
+[19:45:57.262] [FrameStats] hello from performance monitor
+[19:45:57.287] [FrameStats] hello from performance monitor
+[19:45:57.304] [FrameStats] hello from performance monitor
+[19:45:57.329] [FrameStats] hello from performance monitor
+[19:45:57.345] [FrameStats] hello from performance monitor
+[19:45:57.362] [FrameStats] hello from performance monitor
+[19:45:57.387] [FrameStats] hello from performance monitor
+[19:45:57.404] [FrameStats] hello from performance monitor
+[19:45:57.429] [FrameStats] hello from performance monitor
+[19:45:57.445] [FrameStats] hello from performance monitor
+[19:45:57.462] [FrameStats] hello from performance monitor
+[19:45:57.487] [FrameStats] hello from performance monitor
+[19:45:57.504] [FrameStats] hello from performance monitor
+[19:45:57.528] [FrameStats] hello from performance monitor
+[19:45:57.546] [FrameStats] hello from performance monitor
+[19:45:57.562] [FrameStats] hello from performance monitor
+[19:45:57.587] [FrameStats] hello from performance monitor
+[19:45:57.604] [FrameStats] hello from performance monitor
+[19:45:57.629] [FrameStats] hello from performance monitor
+[19:45:57.645] [FrameStats] hello from performance monitor
+[19:45:57.662] [FrameStats] hello from performance monitor
+[19:45:57.687] [FrameStats] hello from performance monitor
+[19:45:57.704] [FrameStats] hello from performance monitor
+[19:45:57.729] [FrameStats] hello from performance monitor
+[19:45:57.746] [FrameStats] hello from performance monitor
+[19:45:57.762] [FrameStats] hello from performance monitor
+[19:45:57.787] [FrameStats] hello from performance monitor
+[19:45:57.803] [FrameStats] hello from performance monitor
+[19:45:57.829] [FrameStats] hello from performance monitor
+[19:45:57.846] [FrameStats] hello from performance monitor
+[19:45:57.862] [FrameStats] hello from performance monitor
+[19:45:57.887] [FrameStats] hello from performance monitor
+[19:45:57.904] [FrameStats] hello from performance monitor
+[19:45:57.928] [FrameStats] hello from performance monitor
+[19:45:57.945] [FrameStats] hello from performance monitor
+[19:45:57.962] [FrameStats] hello from performance monitor
+[19:45:57.987] [FrameStats] hello from performance monitor
+[19:45:58.004] [FrameStats] hello from performance monitor
+[19:45:58.029] [FrameStats] hello from performance monitor
+[19:45:58.045] [FrameStats] hello from performance monitor
+[19:45:58.063] [FrameStats] hello from performance monitor
+[19:45:58.087] [FrameStats] hello from performance monitor
+[19:45:58.103] [FrameStats] hello from performance monitor
+[19:45:58.128] [FrameStats] hello from performance monitor
+[19:45:58.145] [FrameStats] hello from performance monitor
+[19:45:58.162] [FrameStats] hello from performance monitor
+[19:45:58.187] [FrameStats] hello from performance monitor
+[19:45:58.204] [FrameStats] hello from performance monitor
+[19:45:58.228] [FrameStats] hello from performance monitor
+[19:45:58.245] [FrameStats] hello from performance monitor
+[19:45:58.261] [FrameStats] hello from performance monitor
+[19:45:58.287] [FrameStats] hello from performance monitor
+[19:46:00.191] [FrameStats] have options menu
+[19:46:00.191] [FrameStats] added stats setting option

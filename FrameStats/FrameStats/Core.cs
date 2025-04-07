@@ -1,45 +1,50 @@
 ﻿using MelonLoader;
 using LibreHardwareMonitor.Hardware;
 using UnityEngine;
+using UI.Common.Options;
 
 [assembly: MelonInfo(typeof(FrameStats.Core), "FrameStats", "1.0.0", "oneshade", null)]
 [assembly: MelonGame("CuriousOwlGames", "StellarDrive")]
 
 namespace FrameStats {
     public class Core : MelonMod {
-        private GameObject inGameMenu = null;
-        private GameObject activeMenuContainer = null;
-        private GameObject optionsMenu = null;
-        private bool hadOptionsMenu = false;
+        private AssetLoader _assetLoader;
 
-        private static Computer computer = new Computer{
+        private GameObject _inGameMenu = null;
+        private GameObject _activeMenuContainer = null;
+        private GameObject _optionsMenu = null;
+        private bool _hadOptionsMenu = false;
+
+        private static Computer _computer = new Computer{
             IsBatteryEnabled = true,
             IsCpuEnabled = true,
             IsGpuEnabled = true,
             IsMemoryEnabled = true
         };
 
-        public override void OnInitializeMelon() {
-            Melon<Core>.Logger.Msg("melon initialized");
+        public override void OnLateInitializeMelon() {
+            _assetLoader = new AssetLoader(Melon<Core>.Logger, "./UserData/AssetBundles");
 
-            computer.Open();
-            computer.Accept(new HardwareUpdateVisitor());
+            /******************************************************************************/
+            _computer.Open();
+            _computer.Accept(new HardwareUpdateVisitor());
 
-            foreach (IHardware hardware in computer.Hardware) {
-                Melon<Core>.Logger.Msg("Hardware: {0}", hardware.Name);
+            foreach (IHardware hardware in _computer.Hardware) {
+                Melon<Core>.Logger.Msg($"Hardware: {hardware.Name}");
                 foreach (IHardware subhardware in hardware.SubHardware) {
-                    Melon<Core>.Logger.Msg("\tSubhardware: {0}", subhardware.Name);
+                    Melon<Core>.Logger.Msg($"    Subhardware: {subhardware.Name}");
                     foreach (ISensor sensor in subhardware.Sensors) {
-                        Melon<Core>.Logger.Msg("\t\tSensor: {0}, value: {1}", sensor.Name, sensor.Value);
+                        Melon<Core>.Logger.Msg($"        Sensor: {sensor.Name}, value: {sensor.Value}");
                     }
                 }
 
                 foreach (ISensor sensor in hardware.Sensors) {
-                    Melon<Core>.Logger.Msg("\tSensor: {0}, value: {1}", sensor.Name, sensor.Value);
+                    Melon<Core>.Logger.Msg($"    Sensor: {sensor.Name}, value: {sensor.Value}");
                 }
             }
 
-            computer.Close();
+            _computer.Close();
+            /******************************************************************************/
         }
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName) {
@@ -47,35 +52,35 @@ namespace FrameStats {
 
             switch (buildIndex) {
                 case 0: // MainMenu
-                    inGameMenu = null;
-                    activeMenuContainer = GameObject.Find("MainMenuCanvas/MainMenu/Menu/SelectedMenu/MenuContent");
+                    _inGameMenu = null;
+                    _activeMenuContainer = GameObject.Find("MainMenuCanvas/MainMenu/Menu/SelectedMenu/MenuContent");
                     break;
 
                 case 1: // MainGame
-                    inGameMenu = GameObject.Find("UI/PauseCanvas/Canvas");
-                    activeMenuContainer = GameObject.Find("UI/PauseCanvas/Canvas/Menu");
+                    _inGameMenu = GameObject.Find("UI/PauseCanvas/Canvas");
+                    _activeMenuContainer = GameObject.Find("UI/PauseCanvas/Canvas/Menu");
                     break;
 
                 default:
-                    inGameMenu = null;
-                    activeMenuContainer = null;
+                    _inGameMenu = null;
+                    _activeMenuContainer = null;
                     break;
             }
         }
 
         public override void OnFixedUpdate() {
-            optionsMenu = activeMenuContainer?.transform.Find("OptionsMenu")?.gameObject;
-            bool haveOptionsMenu = optionsMenu != null;
+            _optionsMenu = _activeMenuContainer?.transform.Find("OptionsMenu")?.gameObject;
+            bool haveOptionsMenu = _optionsMenu != null;
 
-            if (!hadOptionsMenu && haveOptionsMenu) {
+            if (!_hadOptionsMenu && haveOptionsMenu) {
                 Melon<Core>.Logger.Msg("have options menu");
                 CreateFrameStatsSettingsUI();
-            } else if (hadOptionsMenu && !haveOptionsMenu) {
+            } else if (_hadOptionsMenu && !haveOptionsMenu) {
                 Melon<Core>.Logger.Msg("lost options menu");
             }
 
-            hadOptionsMenu = haveOptionsMenu;
-            if (inGameMenu && !inGameMenu.activeSelf) PrintStats();
+            _hadOptionsMenu = haveOptionsMenu;
+            if (_inGameMenu && !_inGameMenu.activeSelf) PrintStats();
         }
 
         private void PrintStats() {
@@ -83,8 +88,14 @@ namespace FrameStats {
         }
 
         private void CreateFrameStatsSettingsUI() {
-            GameObject frameStatsSettings = new GameObject("FrameStats");
-            frameStatsSettings.transform.SetParent(optionsMenu.transform);
+            GameObject frameStatsSettings = _assetLoader.GetAsset("ui/FrameStatsSettings") as GameObject;
+            if (!frameStatsSettings) {
+                Melon<Core>.Logger.Error("failed to load frame stats settings ui");
+                return;
+            }
+
+            frameStatsSettings.AddComponent<FrameStatsSettings>();
+            frameStatsSettings.transform.SetParent(_optionsMenu.transform);
             Melon<Core>.Logger.Msg("added stats setting option");
         }
     }
