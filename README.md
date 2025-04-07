@@ -18,3 +18,6 @@ When running StellarDrive (StellarDrive_0.6.5/StellarDrive.exe), you should see 
 as well as some additional features in the game window that are added by the mod:
 - ~~Enable performance stats checkbox in the options menu~~
 - ~~A panel in the top right corner showing FPS, CPU/GPU temperature, RAM usage, etc. (if enabled in options)~~
+
+## Notes
+- You may need to run StellarDrive as administrator for the mod to be able to access certain performance metrics (on my machine for example, administrator privileges are needed to read CPU temperature and clock frequency)
