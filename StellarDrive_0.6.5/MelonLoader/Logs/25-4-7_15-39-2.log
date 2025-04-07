@@ -1,0 +1,227 @@
+
+[15:39:02.256] ------------------------------
+[15:39:02.278] MelonLoader v0.7.0 Open-Beta
+[15:39:02.279] OS: Windows 11
+[15:39:02.279] Hash Code: F2DCA88FB1569FD6750096CED35BBB808C50BA273E0D295347A24385B0B764CA
+[15:39:02.279] ------------------------------
+[15:39:02.280] Game Type: MonoBleedingEdge
+[15:39:02.281] Game Arch: x64
+[15:39:02.281] ------------------------------
+[15:39:02.281] Command-Line: 
+[15:39:02.282] ------------------------------
+[15:39:02.282] Core::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[15:39:02.282] Game::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[15:39:02.290] Game::DataPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive_Data
+[15:39:02.290] Game::ApplicationPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive.exe
+[15:39:02.290] Runtime Type: net35
+[15:39:02.356] ------------------------------
+[15:39:02.357] Game Name: StellarDrive
+[15:39:02.357] Game Developer: CuriousOwlGames
+[15:39:02.359] Unity Version: 2022.3.11f1
+[15:39:02.359] Game Version: UNKNOWN
+[15:39:02.359] ------------------------------
+
+[15:39:02.598] Preferences Loaded!
+
+[15:39:02.618] Loading UserLibs...
+[15:39:02.636] ------------------------------
+[15:39:02.639] Melon Assembly loaded: '.\UserLibs\HidSharp.dll'
+[15:39:02.639] SHA256 Hash: '61EB2E22A5620D789A23D389F1AF9D38FAFF4D85F46ADEDBC28FB22CFEC61BF9'
+[15:39:02.646] Melon Assembly loaded: '.\UserLibs\LibreHardwareMonitorLib.dll'
+[15:39:02.646] SHA256 Hash: '99B39B0B0AC865C38A33DFF7DEE080FF17AAC3337B2332812CA2D7BB13C89460'
+[15:39:02.647] Melon Assembly loaded: '.\UserLibs\Microsoft.Win32.Registry.dll'
+[15:39:02.647] SHA256 Hash: 'D641EB0065BD5CDB541C5BF0D2FF976720D35D62416AB959727651ABF0ABA2CA'
+[15:39:02.648] Melon Assembly loaded: '.\UserLibs\System.Buffers.dll'
+[15:39:02.648] SHA256 Hash: 'C65FFF603B283DC966D1A8B730C11D5E5E750E8021BD24640612F6CC3F2C6FB7'
+[15:39:02.650] Melon Assembly loaded: '.\UserLibs\System.CodeDom.dll'
+[15:39:02.650] SHA256 Hash: 'CF18C822A341A3932FC8C08D7F21BF015F7E3C2696619560C94B63629341376A'
+[15:39:02.651] Melon Assembly loaded: '.\UserLibs\System.IO.FileSystem.AccessControl.dll'
+[15:39:02.651] SHA256 Hash: 'D2D6CD3FEF822959B68A68A6AF6096963BBE6493D90E16F0AF65FEDE25D85F32'
+[15:39:02.652] Melon Assembly loaded: '.\UserLibs\System.IO.Ports.dll'
+[15:39:02.652] SHA256 Hash: 'B1ECEF838C8B833BE76D1EF75AD8A0B1FAD805FC951136C9E5256FD3CF15FC1B'
+[15:39:02.654] Melon Assembly loaded: '.\UserLibs\System.Management.dll'
+[15:39:02.655] SHA256 Hash: '205BF789DD38D8ABC5FDC9CD8653469400ED9D6386B07384609848B9C95D7721'
+[15:39:02.656] Melon Assembly loaded: '.\UserLibs\System.Memory.dll'
+[15:39:02.656] SHA256 Hash: 'D2E3949FCF3A3B3A20BB9A568A4DA582D9A90D64F34C0BDC07C9029BFE8F1858'
+[15:39:02.659] Melon Assembly loaded: '.\UserLibs\System.Numerics.Vectors.dll'
+[15:39:02.659] SHA256 Hash: '2324EE5A35674269225E2AA20957CE8830DBCA0CFFB918BD593F7A3222DEE480'
+[15:39:02.660] Melon Assembly loaded: '.\UserLibs\System.Runtime.CompilerServices.Unsafe.dll'
+[15:39:02.660] SHA256 Hash: 'BFC8F02A96934786CA5A0514A3B657021C12542E215E94B78FDCC74BFEFFE3D3'
+[15:39:02.661] Melon Assembly loaded: '.\UserLibs\System.Security.AccessControl.dll'
+[15:39:02.661] SHA256 Hash: '93084849C17A21F641C13C9F17545CFE18C1EC097561F3F0EBBBE26F358BA120'
+[15:39:02.662] Melon Assembly loaded: '.\UserLibs\System.Security.Principal.Windows.dll'
+[15:39:02.662] SHA256 Hash: '7828DFD952A9FD49404477BAFF714849177D9F18C0654ADAFADBDCAFB4B21F47'
+[15:39:02.685] Melon Assembly loaded: '.\UserLibs\UniverseLib.Mono.dll'
+[15:39:02.685] SHA256 Hash: '3B10913FFEAC9A0744583F0BB18218A5CFAFCBA467A7F9F99FA731E801A5A880'
+[15:39:02.686] ------------------------------
+[15:39:02.686] 0 UserLibs loaded.
+
+[15:39:02.686] Loading Plugins...
+[15:39:02.687] 0 Plugins loaded.
+
+
+[15:39:03.425] Loading Mods...
+[15:39:03.427] ------------------------------
+[15:39:03.428] Melon Assembly loaded: '.\Mods\FrameStats.dll'
+[15:39:03.428] SHA256 Hash: 'CC28F3EEED808E0C53228D95142F87245EA568A033335F33967F8EDDC7D3E7B8'
+[15:39:03.444] Melon Assembly loaded: '.\Mods\UnityExplorer.ML.Mono.dll'
+[15:39:03.444] SHA256 Hash: '7E6C95C5F0DB2D6B22F506AAD4D268A96250BD64D8E259B7E4073106250F36D2'
+
+[15:39:03.466] ------------------------------
+[15:39:03.467] FrameStats v1.0.0
+[15:39:03.467] by oneshade
+[15:39:03.467] Assembly: FrameStats.dll
+[15:39:03.467] ------------------------------
+[15:39:03.469] ------------------------------
+[15:39:03.469] UnityExplorer v4.9.0
+[15:39:03.469] by Sinai
+[15:39:03.469] Assembly: UnityExplorer.ML.Mono.dll
+[15:39:03.470] ------------------------------
+[15:39:03.470] ------------------------------
+[15:39:03.470] 2 Mods loaded.
+
+[15:39:03.475] Support Module Loaded: C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\MelonLoader\Dependencies\SupportModules\Mono.dll
+[15:39:03.498] [FrameStats] Loading asset bundle ui...
+[15:39:03.511] [FrameStats]     Loaded asset FrameStatsPanel
+[15:39:03.512] [FrameStats]     Loaded asset FrameStatsSettings
+[15:39:03.515] [UnityExplorer] UnityExplorer 4.9.0 initializing...
+[15:39:03.531] [UnityExplorer] [UniverseLib] UniverseLib 1.5.1 initializing...
+[15:39:03.895] [UnityExplorer] [UniverseLib] Finished UniverseLib initial setup.
+[15:39:03.899] [UnityExplorer] Initialized UnityCrashPrevention for: Canvas.get_renderingDisplaySize
+[15:39:06.169] [FrameStats] scene MainMenu loaded, index 0
+[15:39:07.777] [UnityExplorer] [UniverseLib] Initialized new InputSystem support.
+[15:39:07.830] [UnityExplorer] [UniverseLib] Loaded modern bundle for Unity 2022.3.11f1
+[15:39:07.846] [UnityExplorer] [UniverseLib] UniverseLib 1.5.1 initialized.
+[15:39:07.847] [UnityExplorer] Creating UI...
+[15:39:08.323] [UnityExplorer] UnityExplorer 4.9.0 (Mono) initialized.
+[15:39:09.904] [FrameStats] have options menu
+[15:39:09.905] [FrameStats] added stats setting option
+[15:39:14.260] [FrameStats] Toggle: False
+[15:39:14.526] [FrameStats] Toggle: True
+[15:39:16.351] [FrameStats] lost options menu
+[15:39:20.662] [FrameStats] scene MainGame loaded, index 1
+[15:39:20.938] [FrameStats] hello from performance monitor
+[15:39:20.971] [FrameStats] hello from performance monitor
+[15:39:20.971] [FrameStats] hello from performance monitor
+[15:39:20.987] [FrameStats] hello from performance monitor
+[15:39:21.071] [FrameStats] hello from performance monitor
+[15:39:21.071] [FrameStats] hello from performance monitor
+[15:39:21.072] [FrameStats] hello from performance monitor
+[15:39:21.072] [FrameStats] hello from performance monitor
+[15:39:21.230] [FrameStats] hello from performance monitor
+[15:39:21.230] [FrameStats] hello from performance monitor
+[15:39:21.230] [FrameStats] hello from performance monitor
+[15:39:21.231] [FrameStats] hello from performance monitor
+[15:39:21.231] [FrameStats] hello from performance monitor
+[15:39:21.231] [FrameStats] hello from performance monitor
+[15:39:21.231] [FrameStats] hello from performance monitor
+[15:39:21.231] [FrameStats] hello from performance monitor
+[15:39:22.217] [FrameStats] hello from performance monitor
+[15:39:22.217] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.218] [FrameStats] hello from performance monitor
+[15:39:22.219] [FrameStats] hello from performance monitor
+[15:39:22.219] [FrameStats] hello from performance monitor
+[15:39:22.219] [FrameStats] hello from performance monitor
+[15:39:22.219] [FrameStats] hello from performance monitor
+[15:39:22.219] [FrameStats] hello from performance monitor
+[15:39:23.040] [FrameStats] hello from performance monitor
+[15:39:23.266] [FrameStats] hello from performance monitor
+[15:39:23.266] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.268] [FrameStats] hello from performance monitor
+[15:39:23.269] [FrameStats] hello from performance monitor
+[15:39:23.269] [FrameStats] hello from performance monitor
+[15:39:23.269] [FrameStats] hello from performance monitor
+[15:39:23.269] [FrameStats] hello from performance monitor
+[15:39:23.329] [FrameStats] hello from performance monitor
+[15:39:23.329] [FrameStats] hello from performance monitor
+[15:39:23.330] [FrameStats] hello from performance monitor
+[15:39:23.346] [FrameStats] hello from performance monitor
+[15:39:23.359] [FrameStats] hello from performance monitor
+[15:39:23.383] [FrameStats] hello from performance monitor
+[15:39:23.404] [FrameStats] hello from performance monitor
+[15:39:23.422] [FrameStats] hello from performance monitor
+[15:39:23.441] [FrameStats] hello from performance monitor
+[15:39:23.459] [FrameStats] hello from performance monitor
+[15:39:23.483] [FrameStats] hello from performance monitor
+[15:39:23.504] [FrameStats] hello from performance monitor
+[15:39:23.521] [FrameStats] hello from performance monitor
+[15:39:23.541] [FrameStats] hello from performance monitor
+[15:39:23.558] [FrameStats] hello from performance monitor
+[15:39:23.579] [FrameStats] hello from performance monitor
+[15:39:23.600] [FrameStats] hello from performance monitor
+[15:39:23.621] [FrameStats] hello from performance monitor
+[15:39:23.641] [FrameStats] hello from performance monitor
+[15:39:23.658] [FrameStats] hello from performance monitor
+[15:39:23.679] [FrameStats] hello from performance monitor
+[15:39:23.700] [FrameStats] hello from performance monitor
+[15:39:23.721] [FrameStats] hello from performance monitor
+[15:39:23.743] [FrameStats] hello from performance monitor
+[15:39:23.763] [FrameStats] hello from performance monitor
+[15:39:23.779] [FrameStats] hello from performance monitor
+[15:39:23.800] [FrameStats] hello from performance monitor
+[15:39:23.821] [FrameStats] hello from performance monitor
+[15:39:23.845] [FrameStats] hello from performance monitor
+[15:39:23.858] [FrameStats] hello from performance monitor
+[15:39:23.879] [FrameStats] hello from performance monitor
+[15:39:23.900] [FrameStats] hello from performance monitor
+[15:39:23.921] [FrameStats] hello from performance monitor
+[15:39:23.942] [FrameStats] hello from performance monitor
+[15:39:23.958] [FrameStats] hello from performance monitor
+[15:39:23.979] [FrameStats] hello from performance monitor
+[15:39:24.000] [FrameStats] hello from performance monitor
+[15:39:24.020] [FrameStats] hello from performance monitor
+[15:39:24.042] [FrameStats] hello from performance monitor
+[15:39:24.058] [FrameStats] hello from performance monitor
+[15:39:24.079] [FrameStats] hello from performance monitor
+[15:39:24.100] [FrameStats] hello from performance monitor
+[15:39:24.121] [FrameStats] hello from performance monitor
+[15:39:24.142] [FrameStats] hello from performance monitor
+[15:39:24.158] [FrameStats] hello from performance monitor
+[15:39:24.179] [FrameStats] hello from performance monitor
+[15:39:24.200] [FrameStats] hello from performance monitor
+[15:39:24.227] [FrameStats] hello from performance monitor
+[15:39:24.243] [FrameStats] hello from performance monitor
+[15:39:24.258] [FrameStats] hello from performance monitor
+[15:39:24.282] [FrameStats] hello from performance monitor
+[15:39:24.300] [FrameStats] hello from performance monitor
+[15:39:24.321] [FrameStats] hello from performance monitor
+[15:39:24.341] [FrameStats] hello from performance monitor
+[15:39:24.359] [FrameStats] hello from performance monitor
+[15:39:24.379] [FrameStats] hello from performance monitor
+[15:39:24.400] [FrameStats] hello from performance monitor
+[15:39:24.420] [FrameStats] hello from performance monitor
+[15:39:24.445] [FrameStats] hello from performance monitor
+[15:39:24.458] [FrameStats] hello from performance monitor
+[15:39:24.479] [FrameStats] hello from performance monitor
+[15:39:24.500] [FrameStats] hello from performance monitor
+[15:39:24.520] [FrameStats] hello from performance monitor
+[15:39:24.541] [FrameStats] hello from performance monitor
+[15:39:24.558] [FrameStats] hello from performance monitor
+[15:39:36.324] [FrameStats] have options menu
+[15:39:36.324] [FrameStats] added stats setting option
+[15:39:37.561] [FrameStats] Toggle: False
+[15:39:37.913] [FrameStats] Toggle: True
+[15:39:40.186] [FrameStats] scene MainMenu loaded, index 0
+[15:39:40.681] [FrameStats] lost options menu
+[15:39:41.917] [FrameStats] have options menu
+[15:39:41.917] [FrameStats] added stats setting option
+[15:39:43.493] Preferences Saved!

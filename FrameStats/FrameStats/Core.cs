@@ -1,5 +1,4 @@
 ﻿using MelonLoader;
-using LibreHardwareMonitor.Hardware;
 using UI.Common.Options;
 using UnityEngine;
 
@@ -8,6 +7,7 @@ using UnityEngine;
 
 namespace FrameStats {
     public class Core : MelonMod {
+        private MelonPreferences_Entry<bool> _frameStatsEnabled;
         private AssetLoader _assetLoader;
 
         private GameObject _inGameMenu = null;
@@ -15,29 +15,16 @@ namespace FrameStats {
         private GameObject _optionsMenu = null;
         private bool _hadOptionsMenu = false;
 
-        private static Computer _computer = new Computer{
-            IsBatteryEnabled = true,
-            IsCpuEnabled = true,
-            IsGpuEnabled = true,
-            IsMemoryEnabled = true
-        };
-
-        public override void OnLateInitializeMelon() {
-            _assetLoader = new AssetLoader(Melon<Core>.Logger, "./UserData/AssetBundles");
-
-            /******************************************************************************/
-            _computer.Open();
-            _computer.Accept(new HardwareUpdateVisitor());
-
-            foreach (IHardware hardware in _computer.Hardware) {
+        public override void OnInitializeMelon() {
+            MelonPreferences_Category frameStatsPreferences = MelonPreferences.CreateCategory("FrameStatsPreferences");
+            _frameStatsEnabled = frameStatsPreferences.CreateEntry<bool>("FrameStatsEnabled", false);
+            _assetLoader = new AssetLoader("./UserData/AssetBundles");
+            /*foreach (IHardware hardware in _computer.Hardware) {
                 Melon<Core>.Logger.Msg($"Hardware: {hardware.Name}");
                 foreach (ISensor sensor in hardware.Sensors) {
                     Melon<Core>.Logger.Msg($"    Sensor: {sensor.Name}, type: {sensor.SensorType}, value: {sensor.Value}");
                 }
-            }
-
-            _computer.Close();
-            /******************************************************************************/
+            }*/
         }
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName) {
@@ -81,7 +68,7 @@ namespace FrameStats {
         }
 
         private void CreateFrameStatsSettingsUI() {
-            GameObject frameStatsSettings = _assetLoader.GetAsset("ui/FrameStatsSettings") as GameObject;
+            GameObject frameStatsSettings = _assetLoader.InstantiateAsset("ui/FrameStatsSettings") as GameObject;
             if (!frameStatsSettings) {
                 Melon<Core>.Logger.Error("failed to load frame stats settings ui");
                 return;
