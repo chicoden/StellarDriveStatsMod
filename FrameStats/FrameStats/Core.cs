@@ -31,15 +31,8 @@ namespace FrameStats {
 
             foreach (IHardware hardware in _computer.Hardware) {
                 Melon<Core>.Logger.Msg($"Hardware: {hardware.Name}");
-                foreach (IHardware subhardware in hardware.SubHardware) {
-                    Melon<Core>.Logger.Msg($"    Subhardware: {subhardware.Name}");
-                    foreach (ISensor sensor in subhardware.Sensors) {
-                        Melon<Core>.Logger.Msg($"        Sensor: {sensor.Name}, value: {sensor.Value}");
-                    }
-                }
-
                 foreach (ISensor sensor in hardware.Sensors) {
-                    Melon<Core>.Logger.Msg($"    Sensor: {sensor.Name}, value: {sensor.Value}");
+                    Melon<Core>.Logger.Msg($"    Sensor: {sensor.Name}, type: {sensor.SensorType}, value: {sensor.Value}");
                 }
             }
 

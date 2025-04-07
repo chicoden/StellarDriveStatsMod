@@ -1,0 +1,88 @@
+
+[22:49:01.000] ------------------------------
+[22:49:01.023] MelonLoader v0.7.0 Open-Beta
+[22:49:01.024] OS: Windows 11
+[22:49:01.024] Hash Code: F2DCA88FB1569FD6750096CED35BBB808C50BA273E0D295347A24385B0B764CA
+[22:49:01.024] ------------------------------
+[22:49:01.027] Game Type: MonoBleedingEdge
+[22:49:01.027] Game Arch: x64
+[22:49:01.027] ------------------------------
+[22:49:01.027] Command-Line: 
+[22:49:01.028] ------------------------------
+[22:49:01.028] Core::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[22:49:01.028] Game::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[22:49:01.037] Game::DataPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive_Data
+[22:49:01.037] Game::ApplicationPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive.exe
+[22:49:01.037] Runtime Type: net35
+[22:49:01.113] ------------------------------
+[22:49:01.114] Game Name: StellarDrive
+[22:49:01.114] Game Developer: CuriousOwlGames
+[22:49:01.116] Unity Version: 2022.3.11f1
+[22:49:01.116] Game Version: UNKNOWN
+[22:49:01.116] ------------------------------
+
+[22:49:01.368] Preferences Loaded!
+
+[22:49:01.387] Loading UserLibs...
+[22:49:01.507] ------------------------------
+[22:49:01.511] Melon Assembly loaded: '.\UserLibs\HidSharp.dll'
+[22:49:01.511] SHA256 Hash: '61EB2E22A5620D789A23D389F1AF9D38FAFF4D85F46ADEDBC28FB22CFEC61BF9'
+[22:49:01.519] Melon Assembly loaded: '.\UserLibs\LibreHardwareMonitorLib.dll'
+[22:49:01.519] SHA256 Hash: '99B39B0B0AC865C38A33DFF7DEE080FF17AAC3337B2332812CA2D7BB13C89460'
+[22:49:01.520] Melon Assembly loaded: '.\UserLibs\Microsoft.Win32.Registry.dll'
+[22:49:01.520] SHA256 Hash: 'D641EB0065BD5CDB541C5BF0D2FF976720D35D62416AB959727651ABF0ABA2CA'
+[22:49:01.521] Melon Assembly loaded: '.\UserLibs\System.Buffers.dll'
+[22:49:01.521] SHA256 Hash: 'C65FFF603B283DC966D1A8B730C11D5E5E750E8021BD24640612F6CC3F2C6FB7'
+[22:49:01.523] Melon Assembly loaded: '.\UserLibs\System.CodeDom.dll'
+[22:49:01.523] SHA256 Hash: 'CF18C822A341A3932FC8C08D7F21BF015F7E3C2696619560C94B63629341376A'
+[22:49:01.524] Melon Assembly loaded: '.\UserLibs\System.IO.FileSystem.AccessControl.dll'
+[22:49:01.525] SHA256 Hash: 'D2D6CD3FEF822959B68A68A6AF6096963BBE6493D90E16F0AF65FEDE25D85F32'
+[22:49:01.525] Melon Assembly loaded: '.\UserLibs\System.IO.Ports.dll'
+[22:49:01.525] SHA256 Hash: 'B1ECEF838C8B833BE76D1EF75AD8A0B1FAD805FC951136C9E5256FD3CF15FC1B'
+[22:49:01.530] Melon Assembly loaded: '.\UserLibs\System.Management.dll'
+[22:49:01.531] SHA256 Hash: '205BF789DD38D8ABC5FDC9CD8653469400ED9D6386B07384609848B9C95D7721'
+[22:49:01.532] Melon Assembly loaded: '.\UserLibs\System.Memory.dll'
+[22:49:01.532] SHA256 Hash: 'D2E3949FCF3A3B3A20BB9A568A4DA582D9A90D64F34C0BDC07C9029BFE8F1858'
+[22:49:01.535] Melon Assembly loaded: '.\UserLibs\System.Numerics.Vectors.dll'
+[22:49:01.536] SHA256 Hash: '2324EE5A35674269225E2AA20957CE8830DBCA0CFFB918BD593F7A3222DEE480'
+[22:49:01.537] Melon Assembly loaded: '.\UserLibs\System.Runtime.CompilerServices.Unsafe.dll'
+[22:49:01.537] SHA256 Hash: 'BFC8F02A96934786CA5A0514A3B657021C12542E215E94B78FDCC74BFEFFE3D3'
+[22:49:01.538] Melon Assembly loaded: '.\UserLibs\System.Security.AccessControl.dll'
+[22:49:01.538] SHA256 Hash: '93084849C17A21F641C13C9F17545CFE18C1EC097561F3F0EBBBE26F358BA120'
+[22:49:01.539] Melon Assembly loaded: '.\UserLibs\System.Security.Principal.Windows.dll'
+[22:49:01.539] SHA256 Hash: '7828DFD952A9FD49404477BAFF714849177D9F18C0654ADAFADBDCAFB4B21F47'
+[22:49:01.561] Melon Assembly loaded: '.\UserLibs\UniverseLib.Mono.dll'
+[22:49:01.561] SHA256 Hash: '3B10913FFEAC9A0744583F0BB18218A5CFAFCBA467A7F9F99FA731E801A5A880'
+[22:49:01.561] ------------------------------
+[22:49:01.562] 0 UserLibs loaded.
+
+[22:49:01.562] Loading Plugins...
+[22:49:01.563] 0 Plugins loaded.
+
+
+[22:49:02.324] Loading Mods...
+[22:49:02.349] ------------------------------
+[22:49:02.350] Melon Assembly loaded: '.\Mods\FrameStats.dll'
+[22:49:02.350] SHA256 Hash: '32CF260C871328581B3A8748BAD8F5092D544D6F37DB0E20F44D697A45FCD84B'
+[22:49:02.366] Melon Assembly loaded: '.\Mods\UnityExplorer.ML.Mono.dll'
+[22:49:02.366] SHA256 Hash: '7E6C95C5F0DB2D6B22F506AAD4D268A96250BD64D8E259B7E4073106250F36D2'
+
+[22:49:02.392] ------------------------------
+[22:49:02.392] FrameStats v1.0.0
+[22:49:02.392] by oneshade
+[22:49:02.392] Assembly: FrameStats.dll
+[22:49:02.392] ------------------------------
+[22:49:02.393] ------------------------------
+[22:49:02.394] UnityExplorer v4.9.0
+[22:49:02.394] by Sinai
+[22:49:02.395] Assembly: UnityExplorer.ML.Mono.dll
+[22:49:02.395] ------------------------------
+[22:49:02.395] ------------------------------
+[22:49:02.395] 2 Mods loaded.
+
+[22:49:02.401] Support Module Loaded: C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\MelonLoader\Dependencies\SupportModules\Mono.dll
+[22:49:02.411] [UnityExplorer] UnityExplorer 4.9.0 initializing...
+[22:49:02.430] [UnityExplorer] [UniverseLib] UniverseLib 1.5.1 initializing...
+[22:49:02.796] [UnityExplorer] [UniverseLib] Finished UniverseLib initial setup.
+[22:49:02.801] [UnityExplorer] Initialized UnityCrashPrevention for: Canvas.get_renderingDisplaySize
+[22:49:04.340] [FrameStats] scene MainMenu loaded, index 0
