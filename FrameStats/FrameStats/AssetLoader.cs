@@ -26,6 +26,7 @@ namespace FrameStats {
         }
 
         public Object InstantiateAsset(string assetPath) {
+            if (!_assets.ContainsKey(assetPath)) return null;
             return Object.Instantiate(_assets[assetPath]);
         }
     }

@@ -10,7 +10,6 @@ namespace FrameStats {
         private MelonPreferences_Entry<bool> _frameStatsEnabled;
         private AssetLoader _assetLoader;
 
-        private GameObject _inGameMenu = null;
         private GameObject _activeMenuContainer = null;
         private GameObject _optionsMenu = null;
         private bool _hadOptionsMenu = false;
@@ -32,17 +31,14 @@ namespace FrameStats {
 
             switch (buildIndex) {
                 case 0: // MainMenu
-                    _inGameMenu = null;
                     _activeMenuContainer = GameObject.Find("MainMenuCanvas/MainMenu/Menu/SelectedMenu/MenuContent");
                     break;
 
                 case 1: // MainGame
-                    _inGameMenu = GameObject.Find("UI/PauseCanvas/Canvas");
                     _activeMenuContainer = GameObject.Find("UI/PauseCanvas/Canvas/Menu");
                     break;
 
                 default:
-                    _inGameMenu = null;
                     _activeMenuContainer = null;
                     break;
             }
@@ -60,11 +56,6 @@ namespace FrameStats {
             }
 
             _hadOptionsMenu = haveOptionsMenu;
-            if (_inGameMenu && !_inGameMenu.activeSelf) PrintStats();
-        }
-
-        private void PrintStats() {
-            Melon<Core>.Logger.Msg("hello from performance monitor");
         }
 
         private void CreateFrameStatsSettingsUI() {

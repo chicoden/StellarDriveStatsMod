@@ -6,7 +6,7 @@ namespace UI.Common.Options {
     public class FrameStatsSettings : MonoBehaviour {
         private MelonPreferences_Entry<bool> _frameStatsEnabled;
 
-        void Start() {
+        private void Start() {
             MelonPreferences_Category frameStatsPreferences = MelonPreferences.GetCategory("FrameStatsPreferences");
             _frameStatsEnabled = frameStatsPreferences.GetEntry<bool>("FrameStatsEnabled");
 
