@@ -1,5 +1,6 @@
 ﻿using MelonLoader;
 using UI.Common.Options;
+using UI.FrameStats;
 using UnityEngine;
 
 [assembly: MelonInfo(typeof(FrameStats.Core), "FrameStats", "1.0.0", "oneshade", null)]
@@ -18,12 +19,6 @@ namespace FrameStats {
             MelonPreferences_Category frameStatsPreferences = MelonPreferences.CreateCategory("FrameStatsPreferences");
             _frameStatsEnabled = frameStatsPreferences.CreateEntry<bool>("FrameStatsEnabled", false);
             _assetLoader = new AssetLoader("./UserData/AssetBundles");
-            /*foreach (IHardware hardware in _computer.Hardware) {
-                Melon<Core>.Logger.Msg($"Hardware: {hardware.Name}");
-                foreach (ISensor sensor in hardware.Sensors) {
-                    Melon<Core>.Logger.Msg($"    Sensor: {sensor.Name}, type: {sensor.SensorType}, value: {sensor.Value}");
-                }
-            }*/
         }
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName) {
@@ -36,6 +31,7 @@ namespace FrameStats {
 
                 case 1: // MainGame
                     _activeMenuContainer = GameObject.Find("UI/PauseCanvas/Canvas/Menu");
+                    CreateFrameStatsPanelUI();
                     break;
 
                 default:
@@ -61,7 +57,7 @@ namespace FrameStats {
         private void CreateFrameStatsSettingsUI() {
             GameObject frameStatsSettings = _assetLoader.InstantiateAsset("ui/FrameStatsSettings") as GameObject;
             if (!frameStatsSettings) {
-                Melon<Core>.Logger.Error("failed to load frame stats settings ui");
+                Melon<Core>.Logger.Error("failed to instantiate frame stats settings ui");
                 return;
             }
 
@@ -70,7 +66,22 @@ namespace FrameStats {
             frameStatsSettings.transform.SetParent(_optionsMenu.transform);
             frameStatsSettings.transform.localScale = Vector3.one;
 
-            Melon<Core>.Logger.Msg("added stats setting option");
+            Melon<Core>.Logger.Msg("added frame stats settings");
+        }
+
+        private void CreateFrameStatsPanelUI() {
+            GameObject frameStatsPanel = _assetLoader.InstantiateAsset("ui/FrameStatsPanel") as GameObject;
+            if (!frameStatsPanel) {
+                Melon<Core>.Logger.Error("failed to instantiate frame stats panel ui");
+                return;
+            }
+
+            frameStatsPanel.name = "FrameStatsPanel";
+            frameStatsPanel.AddComponent<FrameStatsUpdater>();
+            frameStatsPanel.transform.SetParent(GameObject.Find("UI")?.transform);
+            frameStatsPanel.transform.localScale = Vector3.one;
+
+            Melon<Core>.Logger.Msg("added frame stats panel");
         }
     }
 }

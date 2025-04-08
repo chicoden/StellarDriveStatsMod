@@ -1,0 +1,132 @@
+
+[22:09:01.073] ------------------------------
+[22:09:01.095] MelonLoader v0.7.0 Open-Beta
+[22:09:01.097] OS: Windows 11
+[22:09:01.097] Hash Code: F2DCA88FB1569FD6750096CED35BBB808C50BA273E0D295347A24385B0B764CA
+[22:09:01.097] ------------------------------
+[22:09:01.098] Game Type: MonoBleedingEdge
+[22:09:01.098] Game Arch: x64
+[22:09:01.099] ------------------------------
+[22:09:01.099] Command-Line: 
+[22:09:01.099] ------------------------------
+[22:09:01.099] Core::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[22:09:01.100] Game::BasePath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5
+[22:09:01.107] Game::DataPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive_Data
+[22:09:01.107] Game::ApplicationPath = C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\StellarDrive.exe
+[22:09:01.108] Runtime Type: net35
+[22:09:01.177] ------------------------------
+[22:09:01.178] Game Name: StellarDrive
+[22:09:01.178] Game Developer: CuriousOwlGames
+[22:09:01.180] Unity Version: 2022.3.11f1
+[22:09:01.180] Game Version: UNKNOWN
+[22:09:01.180] ------------------------------
+
+[22:09:01.431] Preferences Loaded!
+
+[22:09:01.451] Loading UserLibs...
+[22:09:01.561] ------------------------------
+[22:09:01.565] Melon Assembly loaded: '.\UserLibs\HidSharp.dll'
+[22:09:01.565] SHA256 Hash: '61EB2E22A5620D789A23D389F1AF9D38FAFF4D85F46ADEDBC28FB22CFEC61BF9'
+[22:09:01.571] Melon Assembly loaded: '.\UserLibs\LibreHardwareMonitorLib.dll'
+[22:09:01.572] SHA256 Hash: '99B39B0B0AC865C38A33DFF7DEE080FF17AAC3337B2332812CA2D7BB13C89460'
+[22:09:01.573] Melon Assembly loaded: '.\UserLibs\Microsoft.Win32.Registry.dll'
+[22:09:01.573] SHA256 Hash: 'D641EB0065BD5CDB541C5BF0D2FF976720D35D62416AB959727651ABF0ABA2CA'
+[22:09:01.574] Melon Assembly loaded: '.\UserLibs\System.Buffers.dll'
+[22:09:01.574] SHA256 Hash: 'C65FFF603B283DC966D1A8B730C11D5E5E750E8021BD24640612F6CC3F2C6FB7'
+[22:09:01.576] Melon Assembly loaded: '.\UserLibs\System.CodeDom.dll'
+[22:09:01.576] SHA256 Hash: 'CF18C822A341A3932FC8C08D7F21BF015F7E3C2696619560C94B63629341376A'
+[22:09:01.577] Melon Assembly loaded: '.\UserLibs\System.IO.FileSystem.AccessControl.dll'
+[22:09:01.578] SHA256 Hash: 'D2D6CD3FEF822959B68A68A6AF6096963BBE6493D90E16F0AF65FEDE25D85F32'
+[22:09:01.579] Melon Assembly loaded: '.\UserLibs\System.IO.Ports.dll'
+[22:09:01.579] SHA256 Hash: 'B1ECEF838C8B833BE76D1EF75AD8A0B1FAD805FC951136C9E5256FD3CF15FC1B'
+[22:09:01.582] Melon Assembly loaded: '.\UserLibs\System.Management.dll'
+[22:09:01.582] SHA256 Hash: '205BF789DD38D8ABC5FDC9CD8653469400ED9D6386B07384609848B9C95D7721'
+[22:09:01.585] Melon Assembly loaded: '.\UserLibs\System.Memory.dll'
+[22:09:01.585] SHA256 Hash: 'D2E3949FCF3A3B3A20BB9A568A4DA582D9A90D64F34C0BDC07C9029BFE8F1858'
+[22:09:01.587] Melon Assembly loaded: '.\UserLibs\System.Numerics.Vectors.dll'
+[22:09:01.588] SHA256 Hash: '2324EE5A35674269225E2AA20957CE8830DBCA0CFFB918BD593F7A3222DEE480'
+[22:09:01.588] Melon Assembly loaded: '.\UserLibs\System.Runtime.CompilerServices.Unsafe.dll'
+[22:09:01.589] SHA256 Hash: 'BFC8F02A96934786CA5A0514A3B657021C12542E215E94B78FDCC74BFEFFE3D3'
+[22:09:01.590] Melon Assembly loaded: '.\UserLibs\System.Security.AccessControl.dll'
+[22:09:01.590] SHA256 Hash: '93084849C17A21F641C13C9F17545CFE18C1EC097561F3F0EBBBE26F358BA120'
+[22:09:01.591] Melon Assembly loaded: '.\UserLibs\System.Security.Principal.Windows.dll'
+[22:09:01.591] SHA256 Hash: '7828DFD952A9FD49404477BAFF714849177D9F18C0654ADAFADBDCAFB4B21F47'
+[22:09:01.614] Melon Assembly loaded: '.\UserLibs\UniverseLib.Mono.dll'
+[22:09:01.614] SHA256 Hash: '3B10913FFEAC9A0744583F0BB18218A5CFAFCBA467A7F9F99FA731E801A5A880'
+[22:09:01.614] ------------------------------
+[22:09:01.614] 0 UserLibs loaded.
+
+[22:09:01.615] Loading Plugins...
+[22:09:01.616] 0 Plugins loaded.
+
+
+[22:09:02.434] Loading Mods...
+[22:09:02.460] ------------------------------
+[22:09:02.461] Melon Assembly loaded: '.\Mods\FrameStats.dll'
+[22:09:02.461] SHA256 Hash: '7C3EDED506A53A6A7ACFA346B09277E0AEEFBD41CB2D61BC90D19AA7F4068E7C'
+[22:09:02.477] Melon Assembly loaded: '.\Mods\UnityExplorer.ML.Mono.dll'
+[22:09:02.477] SHA256 Hash: '7E6C95C5F0DB2D6B22F506AAD4D268A96250BD64D8E259B7E4073106250F36D2'
+
+[22:09:02.502] ------------------------------
+[22:09:02.502] FrameStats v1.0.0
+[22:09:02.502] by oneshade
+[22:09:02.503] Assembly: FrameStats.dll
+[22:09:02.503] ------------------------------
+[22:09:02.504] ------------------------------
+[22:09:02.504] UnityExplorer v4.9.0
+[22:09:02.504] by Sinai
+[22:09:02.504] Assembly: UnityExplorer.ML.Mono.dll
+[22:09:02.505] ------------------------------
+[22:09:02.505] ------------------------------
+[22:09:02.505] 2 Mods loaded.
+
+[22:09:02.510] Support Module Loaded: C:\Users\Pytho\Projects\SDFrameStatsMod\StellarDrive_0.6.5\MelonLoader\Dependencies\SupportModules\Mono.dll
+[22:09:02.532] [FrameStats] Loading asset bundle ui...
+[22:09:02.545] [FrameStats]     Loaded asset FrameStatsPanel
+[22:09:02.546] [FrameStats]     Loaded asset FrameStatsSettings
+[22:09:02.548] [UnityExplorer] UnityExplorer 4.9.0 initializing...
+[22:09:02.564] [UnityExplorer] [UniverseLib] UniverseLib 1.5.1 initializing...
+[22:09:02.937] [UnityExplorer] [UniverseLib] Finished UniverseLib initial setup.
+[22:09:02.942] [UnityExplorer] Initialized UnityCrashPrevention for: Canvas.get_renderingDisplaySize
+[22:09:05.211] [FrameStats] scene MainMenu loaded, index 0
+[22:09:06.824] [UnityExplorer] [UniverseLib] Initialized new InputSystem support.
+[22:09:06.879] [UnityExplorer] [UniverseLib] Loaded modern bundle for Unity 2022.3.11f1
+[22:09:06.896] [UnityExplorer] [UniverseLib] UniverseLib 1.5.1 initialized.
+[22:09:06.897] [UnityExplorer] Creating UI...
+[22:09:07.381] [UnityExplorer] UnityExplorer 4.9.0 (Mono) initialized.
+[22:09:07.462] [FrameStats] have options menu
+[22:09:07.466] [FrameStats] added frame stats settings
+[22:09:09.156] [FrameStats] Toggle: False
+[22:09:09.822] [FrameStats] Toggle: True
+[22:09:12.030] [FrameStats] lost options menu
+[22:09:14.506] [FrameStats] scene MainGame loaded, index 1
+[22:09:16.817] [FrameStats] frame stats updates enabled
+[22:09:16.818] [FrameStats] added frame stats panel
+[22:09:32.680] [FrameStats] have options menu
+[22:09:32.680] [FrameStats] added frame stats settings
+[22:09:35.261] [FrameStats] Toggle: False
+[22:09:35.450] [FrameStats] Toggle: True
+[22:09:37.392] [FrameStats] Toggle: False
+[22:09:37.646] [FrameStats] Toggle: True
+[22:09:38.660] [FrameStats] lost options menu
+[22:09:40.484] [FrameStats] have options menu
+[22:09:40.485] [FrameStats] added frame stats settings
+[22:09:42.199] [FrameStats] frame stats updates disabled
+[22:09:42.421] [FrameStats] scene MainMenu loaded, index 0
+[22:09:42.943] [FrameStats] lost options menu
+[22:09:43.869] [FrameStats] have options menu
+[22:09:43.869] [FrameStats] added frame stats settings
+[22:09:45.072] [FrameStats] lost options menu
+[22:09:46.135] [FrameStats] have options menu
+[22:09:46.135] [FrameStats] added frame stats settings
+[22:09:47.113] [FrameStats] lost options menu
+[22:09:47.955] [FrameStats] have options menu
+[22:09:47.955] [FrameStats] added frame stats settings
+[22:09:49.770] [FrameStats] lost options menu
+[22:09:50.313] [FrameStats] have options menu
+[22:09:50.314] [FrameStats] added frame stats settings
+[22:09:52.367] [FrameStats] lost options menu
+[22:09:53.870] [FrameStats] have options menu
+[22:09:53.871] [FrameStats] added frame stats settings
+[22:09:56.328] [FrameStats] lost options menu
+[22:09:57.796] Preferences Saved!

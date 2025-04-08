@@ -434,6 +434,7 @@
 		<Compile Include="AssetLoader.cs" />
 		<Compile Include="Core.cs" />
 		<Compile Include="FrameStatsSettings.cs" />
+		<Compile Include="FrameStatsUpdater.cs" />
 		<Compile Include="HardwareUpdateVisitor.cs" />
 	</ItemGroup>
 

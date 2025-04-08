@@ -3,19 +3,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI.Common.Options {
+    using FrameStats = global::FrameStats;
+
     public class FrameStatsSettings : MonoBehaviour {
         private MelonPreferences_Entry<bool> _frameStatsEnabled;
 
-        private void Start() {
+        private void Awake() {
             MelonPreferences_Category frameStatsPreferences = MelonPreferences.GetCategory("FrameStatsPreferences");
             _frameStatsEnabled = frameStatsPreferences.GetEntry<bool>("FrameStatsEnabled");
 
-            Toggle toggle = gameObject.transform.GetChild(1).gameObject.GetComponent<Toggle>();
+            Toggle toggle = GetComponentInChildren<Toggle>();
             toggle.isOn = _frameStatsEnabled.Value;
             toggle.onValueChanged.AddListener(OnToggleSwitch);
         }
 
-        public void OnToggleSwitch(bool value) {
+        private void OnToggleSwitch(bool value) {
             _frameStatsEnabled.Value = value;
             Melon<FrameStats.Core>.Logger.Msg($"Toggle: {value}");
         }
