@@ -50,7 +50,7 @@ namespace UI.FrameStats {
             Melon<FrameStats.Core>.Logger.Msg("frame stats updater destroyed");
         }
 
-        private void Start() {
+        private void OnEnable() {
             _frameRateTracker.Reset();
             _frameTimeTracker.Reset();
         }
