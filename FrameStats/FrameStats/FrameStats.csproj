@@ -436,6 +436,7 @@
 		<Compile Include="FrameStatsSettings.cs" />
 		<Compile Include="FrameStatsUpdater.cs" />
 		<Compile Include="HardwareUpdateVisitor.cs" />
+		<Compile Include="RollingAverager.cs" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -19,8 +19,9 @@ namespace FrameStats {
                 Melon<Core>.Logger.Msg($"Loading asset bundle {assetBundleName}...");
                 _assets = new Dictionary<string, Object>();
                 foreach (Object asset in assetBundle.LoadAllAssets()) {
-                    Melon<Core>.Logger.Msg($"    Loaded asset {asset.name}");
-                    _assets.Add($"{assetBundleName}/{asset.name}", asset);
+                    string assetPath = $"{assetBundleName}/{asset.name}";
+                    Melon<Core>.Logger.Msg($"Loaded asset {assetPath}");
+                    _assets.Add(assetPath, asset);
                 }
             }
         }
