@@ -50,6 +50,10 @@ namespace UI.FrameStats {
             Melon<FrameStats.Core>.Logger.Msg("frame stats updater destroyed");
         }
 
+        private void OnToggleEnabled(bool prevValue, bool curValue) {
+            gameObject.SetActive(curValue);
+        }
+
         private void OnEnable() {
             _frameRateTracker.Reset();
             _frameTimeTracker.Reset();
@@ -63,17 +67,6 @@ namespace UI.FrameStats {
 
             double avgFrameTime = _frameTimeTracker.AddSample(deltaTime) * 1000.0;
             _fieldFrameTime.text = $"{avgFrameTime:0.0}ms";
-
-            /*foreach (IHardware hardware in _computer.Hardware) {
-                Melon<FrameStats.Core>.Logger.Msg($"Hardware: {hardware.Name}");
-                foreach (ISensor sensor in hardware.Sensors) {
-                    Melon<FrameStats.Core>.Logger.Msg($"    Sensor: {sensor.Name}, type: {sensor.SensorType}, value: {sensor.Value}");
-                }
-            }*/
-        }
-
-        private void OnToggleEnabled(bool prevValue, bool curValue) {
-            gameObject.SetActive(curValue);
         }
     }
 }

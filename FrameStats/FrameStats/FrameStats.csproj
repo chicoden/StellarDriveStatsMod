@@ -431,7 +431,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Include="AssetLoader.cs" />
+		<Compile Include="AssetManager.cs" />
 		<Compile Include="Core.cs" />
 		<Compile Include="FrameStatsSettings.cs" />
 		<Compile Include="FrameStatsUpdater.cs" />
@@ -440,11 +440,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.4" />
+        <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.4" />
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)..\StellarDrive_0.6.5\Mods&quot;" />
 		<Exec Command="py &quot;$(ProjectDir)copy_userlibs.py&quot;" />
-  </Target>
+    </Target>
 </Project>
