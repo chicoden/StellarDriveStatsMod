@@ -1,6 +1,6 @@
 ﻿using MelonLoader;
 using UnityEngine;
-using Object = UnityEngine.Object;
+using Asset = UnityEngine.Object;
 
 namespace FrameStats {
     public class AssetNotFoundException : Exception {
@@ -10,13 +10,13 @@ namespace FrameStats {
     }
 
     public class AssetManager {
-        private Dictionary<string, Object> _assets;
+        private Dictionary<string, Asset> _assets;
 
         public AssetManager(string assetBundlesRoot) {
-            _assets = new Dictionary<string, Object>();
+            _assets = new Dictionary<string, Asset>();
             foreach (string assetBundlePath in Directory.GetFiles(assetBundlesRoot)) {
                 AssetBundle assetBundle = AssetBundle.LoadFromFile(assetBundlePath);
-                if (!assetBundle) {
+                if (assetBundle is null) {
                     // May not be an asset bundle so just leave a warning
                     Melon<Core>.Logger.Warning($"failed to load asset bundle from file {Path.GetFileName(assetBundlePath)}");
                     continue;
@@ -24,7 +24,7 @@ namespace FrameStats {
 
                 string assetBundleName = Path.GetFileNameWithoutExtension(assetBundlePath);
                 Melon<Core>.Logger.Msg($"Loading asset bundle {assetBundleName}...");
-                foreach (Object asset in assetBundle.LoadAllAssets()) {
+                foreach (Asset asset in assetBundle.LoadAllAssets()) {
                     string assetPath = $"{assetBundleName}/{asset.name}";
                     _assets.Add(assetPath, asset);
                     Melon<Core>.Logger.Msg($"Loaded asset {assetPath}");
@@ -32,12 +32,12 @@ namespace FrameStats {
             }
         }
 
-        public T InstantiateAsset<T>(string assetPath) where T : Object {
+        public T InstantiateAsset<T>(string assetPath) where T : Asset {
             if (!_assets.ContainsKey(assetPath)) {
                 throw new AssetNotFoundException($"asset {assetPath} not found");
             }
 
-            return Object.Instantiate(_assets[assetPath]) as T;
+            return Asset.Instantiate(_assets[assetPath]) as T;
         }
     }
 }

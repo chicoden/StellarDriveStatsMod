@@ -2,7 +2,7 @@
 using FrameStats;
 using UnityEngine;
 using TMPro;
-using Lock = System.Object;
+//using Lock = System.Object;
 
 namespace UI.FrameStats {
     using FrameStats = global::FrameStats;
@@ -18,7 +18,6 @@ namespace UI.FrameStats {
 
         private Thread _hwMonitorThread;
         private bool _hwMonitorSentinel;
-        private Lock _hwMonitorSentinelLock;
 
         private void Awake() {
             MelonPreferences_Category frameStatsPreferences = MelonPreferences.GetCategory("FrameStatsPreferences");
@@ -32,7 +31,7 @@ namespace UI.FrameStats {
             _frameTimeTracker = new RollingAverager(240);
 
             _hwMonitorThread = null;
-            _hwMonitorSentinelLock = new Lock();
+            _hwMonitorSentinel = false;
 
             gameObject.SetActive(_frameStatsEnabled.Value);
             _frameStatsEnabled.OnEntryValueChanged.Subscribe(OnToggleEnabled);
@@ -47,19 +46,16 @@ namespace UI.FrameStats {
             _frameRateTracker.Reset();
             _frameTimeTracker.Reset();
 
-            _hwMonitorThread?.Join();
             _hwMonitorSentinel = true;
-            ThreadStart hwMonitorDelegate = new ThreadStart(MonitorHardware);
-            _hwMonitorThread = new Thread(hwMonitorDelegate);
-            _hwMonitorThread.Start();
+            if (_hwMonitorThread is null || !_hwMonitorThread.IsAlive) {
+                ThreadStart hwMonitorDelegate = new ThreadStart(MonitorHardware);
+                _hwMonitorThread = new Thread(hwMonitorDelegate);
+                _hwMonitorThread.Start();
+            }
         }
 
         private void OnDisable() {
-            lock (_hwMonitorSentinelLock) {
-                _hwMonitorSentinel = false;
-            }
-
-            Melon<FrameStats.Core>.Logger.Msg("waiting for hw monitor thread to finish...");
+            _hwMonitorSentinel = false;
         }
 
         private void Update() {
@@ -79,13 +75,9 @@ namespace UI.FrameStats {
         private void MonitorHardware() {
             Melon<FrameStats.Core>.Logger.Msg("hw monitor thread started");
 
-            bool running = true;
-            while (running) {
+            while (_hwMonitorSentinel) {
                 Melon<FrameStats.Core>.Logger.Msg("hello from hw monitor thread");
                 Thread.Sleep(1000);
-                lock (_hwMonitorSentinelLock) {
-                    running = _hwMonitorSentinel;
-                }
             }
 
             Melon<FrameStats.Core>.Logger.Msg("hw monitor thread finished");

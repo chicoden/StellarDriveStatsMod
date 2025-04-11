@@ -9,14 +9,17 @@ using UnityEngine;
 namespace FrameStats {
     public class Core : MelonMod {
         private AssetManager _assetManager;
-        private GameObject _activeMenuContainer = null;
-        private GameObject _optionsMenu = null;
-        private bool _hadOptionsMenu = false;
+        private GameObject _activeMenuContainer;
+        private GameObject _optionsMenu;
+        private bool _hadOptionsMenu;
 
         public override void OnInitializeMelon() {
             MelonPreferences_Category frameStatsPreferences = MelonPreferences.CreateCategory("FrameStatsPreferences");
             MelonPreferences_Entry<bool> frameStatsEnabled = frameStatsPreferences.CreateEntry<bool>("FrameStatsEnabled", false);
             _assetManager = new AssetManager("./UserData/AssetBundles");
+            _activeMenuContainer = null;
+            _optionsMenu = null;
+            _hadOptionsMenu = false;
         }
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName) {
@@ -40,7 +43,7 @@ namespace FrameStats {
 
         public override void OnFixedUpdate() {
             _optionsMenu = _activeMenuContainer?.transform.Find("OptionsMenu")?.gameObject;
-            bool haveOptionsMenu = _optionsMenu != null;
+            bool haveOptionsMenu = _optionsMenu is not null;
 
             if (!_hadOptionsMenu && haveOptionsMenu) {
                 Melon<Core>.Logger.Msg("have options menu");
