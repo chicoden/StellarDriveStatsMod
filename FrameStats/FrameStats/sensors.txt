@@ -1,0 +1,201 @@
+Intel Core i9-14900HX Cpu
+ - CPU Core #1 Thread #1 Load: 36.77839
+ - CPU Core #1 Thread #2 Load: 8.66552
+ - CPU Core #2 Thread #1 Load: 34.01506
+ - CPU Core #2 Thread #2 Load: 5.01411
+ - CPU Core #3 Thread #1 Load: 30.95573
+ - CPU Core #3 Thread #2 Load: 0.3801167
+ - CPU Core #4 Thread #1 Load: 29.75054
+ - CPU Core #4 Thread #2 Load: 0.09688735
+ - CPU Core #5 Thread #1 Load: 56.37053
+ - CPU Core #5 Thread #2 Load: 10.49155
+ - CPU Core #6 Thread #1 Load: 68.76336
+ - CPU Core #6 Thread #2 Load: 8.685165
+ - CPU Core #7 Thread #1 Load: 27.54877
+ - CPU Core #7 Thread #2 Load: 7.095778
+ - CPU Core #8 Thread #1 Load: 35.37761
+ - CPU Core #8 Thread #2 Load: 6.978148
+ - CPU Core #9 Load: 7.586455
+ - CPU Core #10 Load: 7.031846
+ - CPU Core #11 Load: 23.40282
+ - CPU Core #12 Load: 20.71185
+ - CPU Core #13 Load: 21.60653
+ - CPU Core #14 Load: 19.29755
+ - CPU Core #15 Load: 19.3118
+ - CPU Core #16 Load: 19.95712
+ - CPU Core #17 Load: 21.28116
+ - CPU Core #18 Load: 19.69396
+ - CPU Core #19 Load: 17.29264
+ - CPU Core #20 Load: 13.40014
+ - CPU Core #21 Load: 19.98773
+ - CPU Core #22 Load: 11.31228
+ - CPU Core #23 Load: 10.78046
+ - CPU Core #24 Load: 10.87623
+ - CPU Total Load: 19.70306 --------------------------------
+ - CPU Core Max Load: 68.76336
+ - Core Max Temperature: 94
+ - Core Average Temperature: 82.625 --------------------------------
+ - CPU Core #1 Temperature: 84
+ - CPU Core #2 Temperature: 85
+ - CPU Core #3 Temperature: 84
+ - CPU Core #4 Temperature: 92
+ - CPU Core #5 Temperature: 87
+ - CPU Core #6 Temperature: 94
+ - CPU Core #7 Temperature: 85
+ - CPU Core #8 Temperature: 92
+ - CPU Core #9 Temperature: 79
+ - CPU Core #10 Temperature: 79
+ - CPU Core #11 Temperature: 79
+ - CPU Core #12 Temperature: 79
+ - CPU Core #13 Temperature: 83
+ - CPU Core #14 Temperature: 83
+ - CPU Core #15 Temperature: 83
+ - CPU Core #16 Temperature: 83
+ - CPU Core #17 Temperature: 77
+ - CPU Core #18 Temperature: 77
+ - CPU Core #19 Temperature: 77
+ - CPU Core #20 Temperature: 77
+ - CPU Core #21 Temperature: 81
+ - CPU Core #22 Temperature: 81
+ - CPU Core #23 Temperature: 81
+ - CPU Core #24 Temperature: 81
+ - CPU Package Temperature: 91
+ - CPU Core #1 Distance to TjMax Temperature: 16
+ - CPU Core #2 Distance to TjMax Temperature: 15
+ - CPU Core #3 Distance to TjMax Temperature: 16
+ - CPU Core #4 Distance to TjMax Temperature: 8
+ - CPU Core #5 Distance to TjMax Temperature: 13
+ - CPU Core #6 Distance to TjMax Temperature: 6
+ - CPU Core #7 Distance to TjMax Temperature: 15
+ - CPU Core #8 Distance to TjMax Temperature: 8
+ - CPU Core #9 Distance to TjMax Temperature: 21
+ - CPU Core #10 Distance to TjMax Temperature: 21
+ - CPU Core #11 Distance to TjMax Temperature: 21
+ - CPU Core #12 Distance to TjMax Temperature: 21
+ - CPU Core #13 Distance to TjMax Temperature: 17
+ - CPU Core #14 Distance to TjMax Temperature: 17
+ - CPU Core #15 Distance to TjMax Temperature: 17
+ - CPU Core #16 Distance to TjMax Temperature: 17
+ - CPU Core #17 Distance to TjMax Temperature: 23
+ - CPU Core #18 Distance to TjMax Temperature: 23
+ - CPU Core #19 Distance to TjMax Temperature: 23
+ - CPU Core #20 Distance to TjMax Temperature: 23
+ - CPU Core #21 Distance to TjMax Temperature: 19
+ - CPU Core #22 Distance to TjMax Temperature: 19
+ - CPU Core #23 Distance to TjMax Temperature: 19
+ - CPU Core #24 Distance to TjMax Temperature: 19
+ - CPU Core #1 Clock: 806.4181
+ - CPU Core #2 Clock: 806.4181
+ - CPU Core #3 Clock: 806.4181
+ - CPU Core #4 Clock: 1411.232
+ - CPU Core #5 Clock: 4435.3
+ - CPU Core #6 Clock: 4435.3
+ - CPU Core #7 Clock: 4435.3
+ - CPU Core #8 Clock: 4435.3
+ - CPU Core #9 Clock: 3628.882
+ - CPU Core #10 Clock: 1310.429
+ - CPU Core #11 Clock: 1310.429
+ - CPU Core #12 Clock: 1209.627
+ - CPU Core #13 Clock: 1209.627
+ - CPU Core #14 Clock: 1209.627
+ - CPU Core #15 Clock: 1209.627
+ - CPU Core #16 Clock: 2116.847
+ - CPU Core #17 Clock: 1814.441
+ - CPU Core #18 Clock: 1108.825
+ - CPU Core #19 Clock: 1612.836
+ - CPU Core #20 Clock: 1108.825
+ - CPU Core #21 Clock: 1108.825
+ - CPU Core #22 Clock: 1108.825
+ - CPU Core #23 Clock: 1108.825
+ - CPU Core #24 Clock: 1108.825
+ - CPU Package Power: 63.24681
+ - CPU Cores Power: 54.77742
+ - CPU Memory Power: 0
+ - CPU Platform Power: 133.7186
+ - CPU Core Voltage: 0.7242432
+ - CPU Core #1 Voltage: 0.7242432
+ - CPU Core #2 Voltage: 0.7242432
+ - CPU Core #3 Voltage: 0.7242432
+ - CPU Core #4 Voltage: 0.7242432
+ - CPU Core #5 Voltage: 0.7242432
+ - CPU Core #6 Voltage: 0.7242432
+ - CPU Core #7 Voltage: 0.7242432
+ - CPU Core #8 Voltage: 0.7192383
+ - CPU Core #9 Voltage: 0.7192383
+ - CPU Core #10 Voltage: 0.7192383
+ - CPU Core #11 Voltage: 0.7242432
+ - CPU Core #12 Voltage: 0.7154541
+ - CPU Core #13 Voltage: 0.7104492
+ - CPU Core #14 Voltage: 0.7104492
+ - CPU Core #15 Voltage: 0.7104492
+ - CPU Core #16 Voltage: 0.7104492
+ - CPU Core #17 Voltage: 0.7104492
+ - CPU Core #18 Voltage: 0.7104492
+ - CPU Core #19 Voltage: 0.7104492
+ - CPU Core #20 Voltage: 0.7154541
+ - CPU Core #21 Voltage: 0.7104492
+ - CPU Core #22 Voltage: 0.7104492
+ - CPU Core #23 Voltage: 0.7104492
+ - CPU Core #24 Voltage: 0.7054443
+ - Bus Speed Clock: 100.8023
+Generic Memory Memory
+ - Memory Used Data: 16.02153 --------------------------------
+ - Memory Available Data: 15.69318
+ - Memory Load: 50.51765
+ - Virtual Memory Used Data: 24.14381
+ - Virtual Memory Available Data: 17.07091
+ - Virtual Memory Load: 58.58055
+NVIDIA GeForce RTX 4070 Laptop GPU GpuNvidia
+ - GPU Core Temperature: 62 --------------------------------
+ - GPU Core Clock: 2340
+ - GPU Memory Clock: 8000.982
+ - GPU Core Load: 38 --------------------------------
+ - GPU Memory Controller Load: 14
+ - GPU Video Engine Load: 0
+ - GPU Bus Load: 6
+ - D3D Dedicated Memory Used SmallData: 1279.867 --------------------------------
+ - D3D Shared Memory Used SmallData: 54.12891 --------------------------------
+ - D3D 3D Load: 25.13896
+ - D3D Overlay Load: 0
+ - D3D Video Decode Load: 0
+ - D3D Copy Load: 1.920621
+ - D3D Copy Load: 4.291705
+ - D3D Security Load: 0
+ - D3D Video Encode Load: 0
+ - D3D Video Processing Load: 0
+ - D3D VR Load: 0
+ - GPU Hot Spot Temperature: 68
+ - GPU Memory Total SmallData: 8188
+ - GPU Memory Free SmallData: 6673
+ - GPU Memory Used SmallData: 1514
+ - GPU Memory Load: 18.49586
+ - GPU Package Power: 40.469
+ - GPU PCIe Rx Throughput: 153600
+ - GPU PCIe Tx Throughput: 512000
+Intel(R) UHD Graphics GpuIntel
+ - GPU Power Power: 0.009035743
+ - D3D Shared Memory Total SmallData: 16237.93
+ - D3D Shared Memory Free SmallData:
+ - D3D Shared Memory Used SmallData: 1471.113 --------------------------------
+ - D3D 3D Load: 0.6270754
+ - D3D Video Decode Load: 0
+ - D3D Copy Load: 0
+ - D3D Video Processing Load: 0
+ - D3D Video Decode Load: 0
+ - D3D Other Load: 0
+ - D3D Other Load: 0
+ - D3D Other Load: 0
+ - D3D Other Load: 0
+ - D3D Other Load: 0
+ - D3D GDI Render Load: 0
+ - D3D Other Load: 0
+ - D3D Other Load: 0
+L23M4PC3 Battery
+ - Designed Capacity Energy: 99900
+ - Fully-Charged Capacity Energy: 94470
+ - Degradation Level Level: 5.435435
+ - Remaining Capacity Energy: 94440
+ - Charge Level Level: 99.96825 --------------------------------
+ - Voltage Voltage: 17.437
+ - Charge/Discharge Current Current: 0
+ - Charge/Discharge Rate Power: 0
