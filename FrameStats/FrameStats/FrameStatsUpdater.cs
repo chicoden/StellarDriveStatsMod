@@ -16,6 +16,10 @@ namespace UI.FrameStats {
         private RollingAverager _frameRateTracker;
         private RollingAverager _frameTimeTracker;
 
+        private volatile bool _flagKeepHwMonitorAlive;
+        private volatile bool _flagKeepHwMonitorMonitoring;
+        private Thread _hwMonitorThread;
+
         private void Awake() {
             MelonPreferences_Category frameStatsPreferences = MelonPreferences.GetCategory("FrameStatsPreferences");
             _frameStatsEnabled = frameStatsPreferences.GetEntry<bool>("FrameStatsEnabled");
@@ -27,20 +31,36 @@ namespace UI.FrameStats {
             _frameRateTracker = new RollingAverager(240);
             _frameTimeTracker = new RollingAverager(240);
 
+            ThreadStart hwMonitorDelegate = new ThreadStart(MonitorHardware);
+            _hwMonitorThread = new Thread(hwMonitorDelegate);
+            _flagKeepHwMonitorAlive = false;
+            _flagKeepHwMonitorMonitoring = false;
+
             gameObject.SetActive(_frameStatsEnabled.Value);
             _frameStatsEnabled.OnEntryValueChanged.Subscribe(OnToggleEnabled);
         }
 
         private void OnDestroy() {
             _frameStatsEnabled.OnEntryValueChanged.Unsubscribe(OnToggleEnabled);
+            if (_hwMonitorThread.ThreadState != ThreadState.Unstarted) {
+                _flagKeepHwMonitorAlive = false;
+                _hwMonitorThread.Join();
+            }
         }
 
         private void OnEnable() {
             _frameRateTracker.Reset();
             _frameTimeTracker.Reset();
+
+            _flagKeepHwMonitorMonitoring = true;
+            if (_hwMonitorThread.ThreadState == ThreadState.Unstarted) {
+                _flagKeepHwMonitorAlive = true;
+                _hwMonitorThread.Start();
+            }
         }
 
         private void OnDisable() {
+            _flagKeepHwMonitorMonitoring = false;
         }
 
         private void Update() {
@@ -58,11 +78,20 @@ namespace UI.FrameStats {
         }
 
         private void MonitorHardware() {
-            Melon<FrameStats.Core>.Logger.Msg("hw monitor thread started");
+            Melon<FrameStats.Core>.Logger.Msg("entering hw monitor");
 
-            /* Do something */
+            int x = 0;
+            while (_flagKeepHwMonitorAlive) {
+                while (_flagKeepHwMonitorMonitoring) {
+                    Melon<FrameStats.Core>.Logger.Msg($"value: {x}");
+                    x++;
+                    Thread.Sleep(50);
+                }
 
-            Melon<FrameStats.Core>.Logger.Msg("hw monitor thread finished");
+                Thread.Sleep(50);
+            }
+
+            Melon<FrameStats.Core>.Logger.Msg("exiting hw monitor");
         }
     }
 }
