@@ -17,7 +17,7 @@ namespace UI.FrameStats {
         private RollingAverager _frameTimeTracker;
 
         private Thread _hwMonitorThread;
-        private bool _hwMonitorSentinel;
+        private volatile bool _hwMonitorSentinel;
 
         private void Awake() {
             MelonPreferences_Category frameStatsPreferences = MelonPreferences.GetCategory("FrameStatsPreferences");
