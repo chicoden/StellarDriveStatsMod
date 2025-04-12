@@ -2,7 +2,7 @@
 using FrameStats;
 using UnityEngine;
 using TMPro;
-//using Lock = System.Object;
+using Lock = System.Object;
 
 namespace UI.FrameStats {
     using FrameStats = global::FrameStats;
@@ -12,9 +12,13 @@ namespace UI.FrameStats {
 
         private TMP_Text _fieldFps;
         private TMP_Text _fieldFrameTime;
+        private TMP_Text _fieldBatteryLevel;
 
         private RollingAverager _frameRateTracker;
         private RollingAverager _frameTimeTracker;
+
+        private Lock _hwStatsLock;
+        private string _dummyStat;
 
         private volatile bool _flagKeepHwMonitorAlive;
         private volatile bool _flagKeepHwMonitorMonitoring;
@@ -27,14 +31,18 @@ namespace UI.FrameStats {
             TMP_Text[] textComponents = GetComponentsInChildren<TMP_Text>();
             _fieldFps = textComponents[1];
             _fieldFrameTime = textComponents[3];
+            _fieldBatteryLevel = textComponents[5];
 
             _frameRateTracker = new RollingAverager(240);
             _frameTimeTracker = new RollingAverager(240);
 
-            ThreadStart hwMonitorDelegate = new ThreadStart(MonitorHardware);
-            _hwMonitorThread = new Thread(hwMonitorDelegate);
+            _hwStatsLock = new Lock();
+            _dummyStat = "10.3%";
+
             _flagKeepHwMonitorAlive = false;
             _flagKeepHwMonitorMonitoring = false;
+            ThreadStart hwMonitorDelegate = new ThreadStart(MonitorHardware);
+            _hwMonitorThread = new Thread(hwMonitorDelegate);
 
             gameObject.SetActive(_frameStatsEnabled.Value);
             _frameStatsEnabled.OnEntryValueChanged.Subscribe(OnToggleEnabled);
@@ -71,6 +79,10 @@ namespace UI.FrameStats {
 
             double avgFrameTime = _frameTimeTracker.AddSample(deltaTime) * 1000.0;
             _fieldFrameTime.text = $"{avgFrameTime:0.0}ms";
+
+            lock (_hwStatsLock) {
+                _fieldBatteryLevel.text = _dummyStat;
+            }
         }
 
         private void OnToggleEnabled(bool prevValue, bool curValue) {
@@ -80,11 +92,16 @@ namespace UI.FrameStats {
         private void MonitorHardware() {
             Melon<FrameStats.Core>.Logger.Msg("entering hw monitor");
 
-            int x = 0;
             while (_flagKeepHwMonitorAlive) {
+                double newDummyValue = 0.0;
                 while (_flagKeepHwMonitorMonitoring) {
-                    Melon<FrameStats.Core>.Logger.Msg($"value: {x}");
-                    x++;
+                    newDummyValue += 0.01;
+                    string newDummyStat = $"{newDummyValue:0.0}%";
+
+                    lock (_hwStatsLock) {
+                        _dummyStat = newDummyStat;
+                    }
+
                     Thread.Sleep(50);
                 }
 
