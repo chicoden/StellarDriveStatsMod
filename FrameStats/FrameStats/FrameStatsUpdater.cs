@@ -16,9 +16,6 @@ namespace UI.FrameStats {
         private RollingAverager _frameRateTracker;
         private RollingAverager _frameTimeTracker;
 
-        private Thread _hwMonitorThread;
-        private volatile bool _hwMonitorSentinel;
-
         private void Awake() {
             MelonPreferences_Category frameStatsPreferences = MelonPreferences.GetCategory("FrameStatsPreferences");
             _frameStatsEnabled = frameStatsPreferences.GetEntry<bool>("FrameStatsEnabled");
@@ -30,32 +27,20 @@ namespace UI.FrameStats {
             _frameRateTracker = new RollingAverager(240);
             _frameTimeTracker = new RollingAverager(240);
 
-            _hwMonitorThread = null;
-            _hwMonitorSentinel = false;
-
             gameObject.SetActive(_frameStatsEnabled.Value);
             _frameStatsEnabled.OnEntryValueChanged.Subscribe(OnToggleEnabled);
         }
 
         private void OnDestroy() {
             _frameStatsEnabled.OnEntryValueChanged.Unsubscribe(OnToggleEnabled);
-            _hwMonitorThread?.Join();
         }
 
         private void OnEnable() {
             _frameRateTracker.Reset();
             _frameTimeTracker.Reset();
-
-            _hwMonitorSentinel = true;
-            if (_hwMonitorThread is null || !_hwMonitorThread.IsAlive) {
-                ThreadStart hwMonitorDelegate = new ThreadStart(MonitorHardware);
-                _hwMonitorThread = new Thread(hwMonitorDelegate);
-                _hwMonitorThread.Start();
-            }
         }
 
         private void OnDisable() {
-            _hwMonitorSentinel = false;
         }
 
         private void Update() {
@@ -75,10 +60,7 @@ namespace UI.FrameStats {
         private void MonitorHardware() {
             Melon<FrameStats.Core>.Logger.Msg("hw monitor thread started");
 
-            while (_hwMonitorSentinel) {
-                Melon<FrameStats.Core>.Logger.Msg("hello from hw monitor thread");
-                Thread.Sleep(1000);
-            }
+            /* Do something */
 
             Melon<FrameStats.Core>.Logger.Msg("hw monitor thread finished");
         }
