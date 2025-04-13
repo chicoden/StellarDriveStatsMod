@@ -1,5 +1,6 @@
 ﻿using MelonLoader;
 using FrameStats;
+using LibreHardwareMonitor.Hardware;
 using UnityEngine;
 using TMPro;
 using Lock = System.Object;
@@ -8,21 +9,38 @@ namespace UI.FrameStats {
     using FrameStats = global::FrameStats;
 
     public class FrameStatsUpdater : MonoBehaviour {
+        private static class HardwareStatId {
+            public const int BatteryLevel = 0;
+            public const int CpuTemperature = 1;
+            public const int CpuLoad = 2;
+            public const int RamUsed = 3;
+            public const int GpuTemperature = 4;
+            public const int GpuLoad = 5;
+            public const int DedicatedRamUsed = 6;
+            public const int SharedRamUsed = 7;
+        }
+
+        private const int _HW_STAT_COUNT = 8;
+        private const string _FIELD_UNKNOWN = "???";
+        private const int _ROLLING_AVERAGE_WINDOW = 240;
+        private const int _HW_MONITOR_UPDATE_DELAY = 10;
+        private const int _HW_MONITOR_IDLE_DELAY = 50;
+
         private MelonPreferences_Entry<bool> _frameStatsEnabled;
 
         private TMP_Text _fieldFps;
         private TMP_Text _fieldFrameTime;
-        private TMP_Text _fieldBatteryLevel;
-
-        private RollingAverager _frameRateTracker;
-        private RollingAverager _frameTimeTracker;
+        private TMP_Text[] _fieldHwStats;
 
         private Lock _hwStatsLock;
-        private string _dummyStat;
+        private string[] _hwStatsToDisplay;
 
         private volatile bool _flagKeepHwMonitorAlive;
         private volatile bool _flagKeepHwMonitorMonitoring;
         private Thread _hwMonitorThread;
+
+        private RollingAverager _frameRateTracker;
+        private RollingAverager _frameTimeTracker;
 
         private void Awake() {
             MelonPreferences_Category frameStatsPreferences = MelonPreferences.GetCategory("FrameStatsPreferences");
@@ -31,18 +49,25 @@ namespace UI.FrameStats {
             TMP_Text[] textComponents = GetComponentsInChildren<TMP_Text>();
             _fieldFps = textComponents[1];
             _fieldFrameTime = textComponents[3];
-            _fieldBatteryLevel = textComponents[5];
-
-            _frameRateTracker = new RollingAverager(240);
-            _frameTimeTracker = new RollingAverager(240);
+            _fieldHwStats = new TMP_Text[_HW_STAT_COUNT];
+            for (int i = 0; i < _HW_STAT_COUNT; i++) {
+                _fieldHwStats[i] = textComponents[i * 2 + 5];
+            }
 
             _hwStatsLock = new Lock();
-            _dummyStat = "10.3%";
+            _hwStatsToDisplay = new string[_HW_STAT_COUNT];
+            for (int i = 0; i < _HW_STAT_COUNT; i++) {
+                _hwStatsToDisplay[i] = _FIELD_UNKNOWN;
+            }
 
             _flagKeepHwMonitorAlive = false;
             _flagKeepHwMonitorMonitoring = false;
             ThreadStart hwMonitorDelegate = new ThreadStart(MonitorHardware);
             _hwMonitorThread = new Thread(hwMonitorDelegate);
+
+            // TODO: limit window by time, not sample count
+            _frameRateTracker = new RollingAverager(_ROLLING_AVERAGE_WINDOW);
+            _frameTimeTracker = new RollingAverager(_ROLLING_AVERAGE_WINDOW);
 
             gameObject.SetActive(_frameStatsEnabled.Value);
             _frameStatsEnabled.OnEntryValueChanged.Subscribe(OnToggleEnabled);
@@ -81,7 +106,9 @@ namespace UI.FrameStats {
             _fieldFrameTime.text = $"{avgFrameTime:0.0}ms";
 
             lock (_hwStatsLock) {
-                _fieldBatteryLevel.text = _dummyStat;
+                for (int i = 0; i < _HW_STAT_COUNT; i++) {
+                    _fieldHwStats[i].text = _hwStatsToDisplay[i];
+                }
             }
         }
 
@@ -92,22 +119,103 @@ namespace UI.FrameStats {
         private void MonitorHardware() {
             Melon<FrameStats.Core>.Logger.Msg("entering hw monitor");
 
-            while (_flagKeepHwMonitorAlive) {
-                double newDummyValue = 0.0;
-                while (_flagKeepHwMonitorMonitoring) {
-                    newDummyValue += 0.01;
-                    string newDummyStat = $"{newDummyValue:0.0}%";
+            Computer computer = new Computer{
+                IsBatteryEnabled = true,
+                IsCpuEnabled = true,
+                IsGpuEnabled = true,
+                IsMemoryEnabled = true
+            };
 
-                    lock (_hwStatsLock) {
-                        _dummyStat = newDummyStat;
-                    }
+            computer.Open();
 
-                    Thread.Sleep(50);
+            HardwareUpdateVisitor hwUpdateVisitor = new HardwareUpdateVisitor();
+            ISensor[] sensors = new ISensor[_HW_STAT_COUNT];
+            computer.Accept(hwUpdateVisitor);
+            foreach (IHardware hardware in computer.Hardware) {
+                switch (hardware.HardwareType) {
+                    case HardwareType.Battery:
+                        foreach (ISensor sensor in hardware.Sensors) {
+                            if (sensor.Name == "Charge Level" && sensor.SensorType == SensorType.Level) {
+                                sensors[HardwareStatId.BatteryLevel] = sensor;
+                                break;
+                            }
+                        } break;
+
+                    case HardwareType.Cpu:
+                        foreach (ISensor sensor in hardware.Sensors) {
+                            if (sensor.Name == "Core Max" && sensor.SensorType == SensorType.Temperature) {
+                                sensors[HardwareStatId.CpuTemperature] = sensor;
+                            } else if (sensor.Name == "CPU Total" && sensor.SensorType == SensorType.Load) {
+                                sensors[HardwareStatId.CpuLoad] = sensor;
+                            }
+                        } break;
+
+                    case HardwareType.Memory:
+                        foreach (ISensor sensor in hardware.Sensors) {
+                            if (sensor.Name == "Memory Used" && sensor.SensorType == SensorType.Data) {
+                                sensors[HardwareStatId.RamUsed] = sensor;
+                                break;
+                            }
+                        } break;
+
+                    case HardwareType.GpuNvidia:
+                    case HardwareType.GpuAmd:
+                    case HardwareType.GpuIntel:
+                        if (hardware.Name == SystemInfo.graphicsDeviceName) {
+                            foreach (ISensor sensor in hardware.Sensors) {
+                                if (sensor.Name == "GPU Core" && sensor.SensorType == SensorType.Temperature) {
+                                    sensors[HardwareStatId.GpuTemperature] = sensor;
+                                } else if (sensor.Name == "GPU Core" && sensor.SensorType == SensorType.Load) {
+                                    sensors[HardwareStatId.GpuLoad] = sensor; // Aggregate load types for Intel iGPUs?
+                                } else if (sensor.Name == "D3D Dedicated Memory Used" && sensor.SensorType == SensorType.SmallData) {
+                                    sensors[HardwareStatId.DedicatedRamUsed] = sensor;
+                                } else if (sensor.Name == "D3D Shared Memory Used" && sensor.SensorType == SensorType.SmallData) {
+                                    sensors[HardwareStatId.SharedRamUsed] = sensor;
+                                }
+                            }
+                        } break;
                 }
-
-                Thread.Sleep(50);
             }
 
+            RollingAverager cpuLoadTracker = new RollingAverager(_ROLLING_AVERAGE_WINDOW);
+            RollingAverager gpuLoadTracker = new RollingAverager(_ROLLING_AVERAGE_WINDOW);
+
+            string[] hwStatsToDisplay = new string[_HW_STAT_COUNT];
+
+            while (_flagKeepHwMonitorAlive) {
+                while (_flagKeepHwMonitorMonitoring) {
+                    computer.Accept(hwUpdateVisitor);
+                    float? batteryLevel     = sensors[HardwareStatId.BatteryLevel    ]?.Value;
+                    float? cpuTemp          = sensors[HardwareStatId.CpuTemperature  ]?.Value;
+                    float? cpuLoad          = sensors[HardwareStatId.CpuLoad         ]?.Value;
+                    float? ramUsed          = sensors[HardwareStatId.RamUsed         ]?.Value;
+                    float? gpuTemp          = sensors[HardwareStatId.GpuTemperature  ]?.Value;
+                    float? gpuLoad          = sensors[HardwareStatId.GpuLoad         ]?.Value;
+                    float? dedicatedRamUsed = sensors[HardwareStatId.DedicatedRamUsed]?.Value;
+                    float? sharedRamUsed    = sensors[HardwareStatId.SharedRamUsed   ]?.Value;
+
+                    hwStatsToDisplay[HardwareStatId.BatteryLevel    ] = batteryLevel     is null ? _FIELD_UNKNOWN : $"{batteryLevel:0}%";
+                    hwStatsToDisplay[HardwareStatId.CpuTemperature  ] = cpuTemp          is null ? _FIELD_UNKNOWN : $"{cpuTemp:0.0}C";
+                    hwStatsToDisplay[HardwareStatId.CpuLoad         ] = cpuLoad          is null ? _FIELD_UNKNOWN : $"{cpuLoadTracker.AddSample((float)cpuLoad):0}%";
+                    hwStatsToDisplay[HardwareStatId.RamUsed         ] = ramUsed          is null ? _FIELD_UNKNOWN : $"{ramUsed:0.0}GB";
+                    hwStatsToDisplay[HardwareStatId.GpuTemperature  ] = gpuTemp          is null ? _FIELD_UNKNOWN : $"{gpuTemp:0.0}C";
+                    hwStatsToDisplay[HardwareStatId.GpuLoad         ] = gpuLoad          is null ? _FIELD_UNKNOWN : $"{gpuLoadTracker.AddSample((float)gpuLoad):0}%";
+                    hwStatsToDisplay[HardwareStatId.DedicatedRamUsed] = dedicatedRamUsed is null ? _FIELD_UNKNOWN : $"{dedicatedRamUsed / 1000:0.0}GB";
+                    hwStatsToDisplay[HardwareStatId.SharedRamUsed   ] = sharedRamUsed    is null ? _FIELD_UNKNOWN : $"{sharedRamUsed / 1000:0.0}GB";
+
+                    lock (_hwStatsLock) {
+                        for (int i = 0; i < _HW_STAT_COUNT; i++) {
+                            _hwStatsToDisplay[i] = hwStatsToDisplay[i];
+                        }
+                    }
+
+                    Thread.Sleep(_HW_MONITOR_UPDATE_DELAY);
+                }
+
+                Thread.Sleep(_HW_MONITOR_IDLE_DELAY);
+            }
+
+            computer.Close();
             Melon<FrameStats.Core>.Logger.Msg("exiting hw monitor");
         }
     }
