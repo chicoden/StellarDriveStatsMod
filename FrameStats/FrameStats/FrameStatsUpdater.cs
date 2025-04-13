@@ -23,7 +23,7 @@ namespace UI.FrameStats {
         }
 
         private const int _HW_STAT_COUNT = 8;
-        private const int _HW_MONITOR_UPDATE_DELAY = 10;
+        private const int _HW_MONITOR_UPDATE_DELAY = 50;
         private const int _HW_MONITOR_IDLE_DELAY = 50;
         private const string _FIELD_UNKNOWN = "???";
 
@@ -178,8 +178,8 @@ namespace UI.FrameStats {
                 }
             }
 
-            RollingAverager cpuLoadTracker = new RollingAverager(TimeSpan.FromSeconds(5));
-            RollingAverager gpuLoadTracker = new RollingAverager(TimeSpan.FromSeconds(5));
+            RollingAverager cpuLoadTracker = new RollingAverager(TimeSpan.FromSeconds(15));
+            RollingAverager gpuLoadTracker = new RollingAverager(TimeSpan.FromSeconds(15));
             Stopwatch stopwatch = new Stopwatch();
 
             string[] hwStatsToDisplay = new string[_HW_STAT_COUNT];
