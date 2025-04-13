@@ -11,7 +11,7 @@ namespace UI.FrameStats {
     using FrameStats = global::FrameStats;
 
     public class FrameStatsUpdater : MonoBehaviour {
-        private static class HardwareStatId {
+        private static class StatId {
             public const int BatteryLevel = 0;
             public const int CpuTemperature = 1;
             public const int CpuLoad = 2;
@@ -20,9 +20,9 @@ namespace UI.FrameStats {
             public const int GpuLoad = 5;
             public const int DedicatedRamUsed = 6;
             public const int SharedRamUsed = 7;
+            public const int Max = 8;
         }
 
-        private const int _HW_STAT_COUNT = 8;
         private const int _HW_MONITOR_UPDATE_DELAY = 50;
         private const int _HW_MONITOR_IDLE_DELAY = 50;
         private const string _FIELD_UNKNOWN = "???";
@@ -50,14 +50,14 @@ namespace UI.FrameStats {
             TMP_Text[] textComponents = GetComponentsInChildren<TMP_Text>();
             _fieldFps = textComponents[1];
             _fieldFrameTime = textComponents[3];
-            _fieldHwStats = new TMP_Text[_HW_STAT_COUNT];
-            for (int i = 0; i < _HW_STAT_COUNT; i++) {
+            _fieldHwStats = new TMP_Text[StatId.Max];
+            for (int i = 0; i < StatId.Max; i++) {
                 _fieldHwStats[i] = textComponents[i * 2 + 5];
             }
 
             _hwStatsLock = new Lock();
-            _hwStatsToDisplay = new string[_HW_STAT_COUNT];
-            for (int i = 0; i < _HW_STAT_COUNT; i++) {
+            _hwStatsToDisplay = new string[StatId.Max];
+            for (int i = 0; i < StatId.Max; i++) {
                 _hwStatsToDisplay[i] = _FIELD_UNKNOWN;
             }
 
@@ -107,7 +107,7 @@ namespace UI.FrameStats {
             _fieldFrameTime.text = $"{avgFrameTime:0.0}ms";
 
             lock (_hwStatsLock) {
-                for (int i = 0; i < _HW_STAT_COUNT; i++) {
+                for (int i = 0; i < StatId.Max; i++) {
                     _fieldHwStats[i].text = _hwStatsToDisplay[i];
                 }
             }
@@ -130,14 +130,14 @@ namespace UI.FrameStats {
             computer.Open();
 
             HardwareUpdateVisitor hwUpdateVisitor = new HardwareUpdateVisitor();
-            ISensor[] sensors = new ISensor[_HW_STAT_COUNT];
+            ISensor[] sensors = new ISensor[StatId.Max];
             computer.Accept(hwUpdateVisitor);
             foreach (IHardware hardware in computer.Hardware) {
                 switch (hardware.HardwareType) {
                     case HardwareType.Battery:
                         foreach (ISensor sensor in hardware.Sensors) {
                             if (sensor.Name == "Charge Level" && sensor.SensorType == SensorType.Level) {
-                                sensors[HardwareStatId.BatteryLevel] = sensor;
+                                sensors[StatId.BatteryLevel] = sensor;
                                 break;
                             }
                         } break;
@@ -145,16 +145,16 @@ namespace UI.FrameStats {
                     case HardwareType.Cpu:
                         foreach (ISensor sensor in hardware.Sensors) {
                             if (sensor.Name == "Core Max" && sensor.SensorType == SensorType.Temperature) {
-                                sensors[HardwareStatId.CpuTemperature] = sensor;
+                                sensors[StatId.CpuTemperature] = sensor;
                             } else if (sensor.Name == "CPU Total" && sensor.SensorType == SensorType.Load) {
-                                sensors[HardwareStatId.CpuLoad] = sensor;
+                                sensors[StatId.CpuLoad] = sensor;
                             }
                         } break;
 
                     case HardwareType.Memory:
                         foreach (ISensor sensor in hardware.Sensors) {
                             if (sensor.Name == "Memory Used" && sensor.SensorType == SensorType.Data) {
-                                sensors[HardwareStatId.RamUsed] = sensor;
+                                sensors[StatId.RamUsed] = sensor;
                                 break;
                             }
                         } break;
@@ -165,13 +165,13 @@ namespace UI.FrameStats {
                         if (hardware.Name == SystemInfo.graphicsDeviceName) {
                             foreach (ISensor sensor in hardware.Sensors) {
                                 if (sensor.Name == "GPU Core" && sensor.SensorType == SensorType.Temperature) {
-                                    sensors[HardwareStatId.GpuTemperature] = sensor;
+                                    sensors[StatId.GpuTemperature] = sensor;
                                 } else if (sensor.Name == "GPU Core" && sensor.SensorType == SensorType.Load) {
-                                    sensors[HardwareStatId.GpuLoad] = sensor; // Aggregate load types for Intel iGPUs?
+                                    sensors[StatId.GpuLoad] = sensor; // Aggregate load types for Intel iGPUs?
                                 } else if (sensor.Name == "D3D Dedicated Memory Used" && sensor.SensorType == SensorType.SmallData) {
-                                    sensors[HardwareStatId.DedicatedRamUsed] = sensor;
+                                    sensors[StatId.DedicatedRamUsed] = sensor;
                                 } else if (sensor.Name == "D3D Shared Memory Used" && sensor.SensorType == SensorType.SmallData) {
-                                    sensors[HardwareStatId.SharedRamUsed] = sensor;
+                                    sensors[StatId.SharedRamUsed] = sensor;
                                 }
                             }
                         } break;
@@ -182,7 +182,7 @@ namespace UI.FrameStats {
             RollingAverager gpuLoadTracker = new RollingAverager(TimeSpan.FromSeconds(15));
             Stopwatch stopwatch = new Stopwatch();
 
-            string[] hwStatsToDisplay = new string[_HW_STAT_COUNT];
+            string[] hwStatsToDisplay = new string[StatId.Max];
 
             while (_flagKeepHwMonitorAlive) {
                 cpuLoadTracker.Reset();
@@ -191,29 +191,29 @@ namespace UI.FrameStats {
 
                 while (_flagKeepHwMonitorMonitoring) {
                     computer.Accept(hwUpdateVisitor);
-                    float? batteryLevel     = sensors[HardwareStatId.BatteryLevel    ]?.Value;
-                    float? cpuTemp          = sensors[HardwareStatId.CpuTemperature  ]?.Value;
-                    float? cpuLoad          = sensors[HardwareStatId.CpuLoad         ]?.Value;
-                    float? ramUsed          = sensors[HardwareStatId.RamUsed         ]?.Value;
-                    float? gpuTemp          = sensors[HardwareStatId.GpuTemperature  ]?.Value;
-                    float? gpuLoad          = sensors[HardwareStatId.GpuLoad         ]?.Value;
-                    float? dedicatedRamUsed = sensors[HardwareStatId.DedicatedRamUsed]?.Value;
-                    float? sharedRamUsed    = sensors[HardwareStatId.SharedRamUsed   ]?.Value;
-
                     TimeSpan sampleInterval = stopwatch.Elapsed;
                     stopwatch.Restart();
 
-                    hwStatsToDisplay[HardwareStatId.BatteryLevel    ] = batteryLevel     is null ? _FIELD_UNKNOWN : $"{batteryLevel:0}%";
-                    hwStatsToDisplay[HardwareStatId.CpuTemperature  ] = cpuTemp          is null ? _FIELD_UNKNOWN : $"{cpuTemp:0.0}C";
-                    hwStatsToDisplay[HardwareStatId.CpuLoad         ] = cpuLoad          is null ? _FIELD_UNKNOWN : $"{cpuLoadTracker.AddSample(new Sample((float)cpuLoad, sampleInterval)):0}%";
-                    hwStatsToDisplay[HardwareStatId.RamUsed         ] = ramUsed          is null ? _FIELD_UNKNOWN : $"{ramUsed:0.0}GB";
-                    hwStatsToDisplay[HardwareStatId.GpuTemperature  ] = gpuTemp          is null ? _FIELD_UNKNOWN : $"{gpuTemp:0.0}C";
-                    hwStatsToDisplay[HardwareStatId.GpuLoad         ] = gpuLoad          is null ? _FIELD_UNKNOWN : $"{gpuLoadTracker.AddSample(new Sample((float)gpuLoad, sampleInterval)):0}%";
-                    hwStatsToDisplay[HardwareStatId.DedicatedRamUsed] = dedicatedRamUsed is null ? _FIELD_UNKNOWN : $"{dedicatedRamUsed / 1000:0.0}GB";
-                    hwStatsToDisplay[HardwareStatId.SharedRamUsed   ] = sharedRamUsed    is null ? _FIELD_UNKNOWN : $"{sharedRamUsed / 1000:0.0}GB";
+                    float? batteryLevel     = sensors[StatId.BatteryLevel    ]?.Value;
+                    float? cpuTemp          = sensors[StatId.CpuTemperature  ]?.Value;
+                    float? cpuLoad          = sensors[StatId.CpuLoad         ]?.Value;
+                    float? ramUsed          = sensors[StatId.RamUsed         ]?.Value;
+                    float? gpuTemp          = sensors[StatId.GpuTemperature  ]?.Value;
+                    float? gpuLoad          = sensors[StatId.GpuLoad         ]?.Value;
+                    float? dedicatedRamUsed = sensors[StatId.DedicatedRamUsed]?.Value;
+                    float? sharedRamUsed    = sensors[StatId.SharedRamUsed   ]?.Value;
+
+                    hwStatsToDisplay[StatId.BatteryLevel    ] = batteryLevel     is null ? _FIELD_UNKNOWN : $"{batteryLevel:0}%";
+                    hwStatsToDisplay[StatId.CpuTemperature  ] = cpuTemp          is null ? _FIELD_UNKNOWN : $"{cpuTemp:0.0}C";
+                    hwStatsToDisplay[StatId.CpuLoad         ] = cpuLoad          is null ? _FIELD_UNKNOWN : $"{cpuLoadTracker.AddSample(new Sample((float)cpuLoad, sampleInterval)):0}%";
+                    hwStatsToDisplay[StatId.RamUsed         ] = ramUsed          is null ? _FIELD_UNKNOWN : $"{ramUsed:0.0}GB";
+                    hwStatsToDisplay[StatId.GpuTemperature  ] = gpuTemp          is null ? _FIELD_UNKNOWN : $"{gpuTemp:0.0}C";
+                    hwStatsToDisplay[StatId.GpuLoad         ] = gpuLoad          is null ? _FIELD_UNKNOWN : $"{gpuLoadTracker.AddSample(new Sample((float)gpuLoad, sampleInterval)):0}%";
+                    hwStatsToDisplay[StatId.DedicatedRamUsed] = dedicatedRamUsed is null ? _FIELD_UNKNOWN : $"{dedicatedRamUsed / 1000:0.0}GB";
+                    hwStatsToDisplay[StatId.SharedRamUsed   ] = sharedRamUsed    is null ? _FIELD_UNKNOWN : $"{sharedRamUsed / 1000:0.0}GB";
 
                     lock (_hwStatsLock) {
-                        for (int i = 0; i < _HW_STAT_COUNT; i++) {
+                        for (int i = 0; i < StatId.Max; i++) {
                             _hwStatsToDisplay[i] = hwStatsToDisplay[i];
                         }
                     }
