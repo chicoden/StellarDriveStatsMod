@@ -1,9 +1,11 @@
 ﻿using MelonLoader;
 using FrameStats;
 using LibreHardwareMonitor.Hardware;
+using System.Diagnostics;
 using UnityEngine;
 using TMPro;
 using Lock = System.Object;
+using ThreadState = System.Threading.ThreadState;
 
 namespace UI.FrameStats {
     using FrameStats = global::FrameStats;
@@ -21,10 +23,9 @@ namespace UI.FrameStats {
         }
 
         private const int _HW_STAT_COUNT = 8;
-        private const string _FIELD_UNKNOWN = "???";
-        private const int _ROLLING_AVERAGE_WINDOW = 240;
         private const int _HW_MONITOR_UPDATE_DELAY = 10;
         private const int _HW_MONITOR_IDLE_DELAY = 50;
+        private const string _FIELD_UNKNOWN = "???";
 
         private MelonPreferences_Entry<bool> _frameStatsEnabled;
 
@@ -65,9 +66,8 @@ namespace UI.FrameStats {
             ThreadStart hwMonitorDelegate = new ThreadStart(MonitorHardware);
             _hwMonitorThread = new Thread(hwMonitorDelegate);
 
-            // TODO: limit window by time, not sample count
-            _frameRateTracker = new RollingAverager(_ROLLING_AVERAGE_WINDOW);
-            _frameTimeTracker = new RollingAverager(_ROLLING_AVERAGE_WINDOW);
+            _frameRateTracker = new RollingAverager(TimeSpan.FromSeconds(2));
+            _frameTimeTracker = new RollingAverager(TimeSpan.FromSeconds(2));
 
             gameObject.SetActive(_frameStatsEnabled.Value);
             _frameStatsEnabled.OnEntryValueChanged.Subscribe(OnToggleEnabled);
@@ -98,11 +98,12 @@ namespace UI.FrameStats {
 
         private void Update() {
             double deltaTime = Time.unscaledDeltaTime;
+            TimeSpan frameTimeSpan = TimeSpan.FromSeconds(deltaTime);
 
-            double avgFrameRate = _frameRateTracker.AddSample(1.0 / deltaTime);
+            double avgFrameRate = _frameRateTracker.AddSample(new Sample(1.0 / deltaTime, frameTimeSpan));
             _fieldFps.text = $"{avgFrameRate:0}";
 
-            double avgFrameTime = _frameTimeTracker.AddSample(deltaTime) * 1000.0;
+            double avgFrameTime = _frameTimeTracker.AddSample(new Sample(deltaTime, frameTimeSpan)) * 1000.0;
             _fieldFrameTime.text = $"{avgFrameTime:0.0}ms";
 
             lock (_hwStatsLock) {
@@ -177,12 +178,17 @@ namespace UI.FrameStats {
                 }
             }
 
-            RollingAverager cpuLoadTracker = new RollingAverager(_ROLLING_AVERAGE_WINDOW);
-            RollingAverager gpuLoadTracker = new RollingAverager(_ROLLING_AVERAGE_WINDOW);
+            RollingAverager cpuLoadTracker = new RollingAverager(TimeSpan.FromSeconds(5));
+            RollingAverager gpuLoadTracker = new RollingAverager(TimeSpan.FromSeconds(5));
+            Stopwatch stopwatch = new Stopwatch();
 
             string[] hwStatsToDisplay = new string[_HW_STAT_COUNT];
 
             while (_flagKeepHwMonitorAlive) {
+                cpuLoadTracker.Reset();
+                gpuLoadTracker.Reset();
+                stopwatch.Restart();
+
                 while (_flagKeepHwMonitorMonitoring) {
                     computer.Accept(hwUpdateVisitor);
                     float? batteryLevel     = sensors[HardwareStatId.BatteryLevel    ]?.Value;
@@ -194,12 +200,15 @@ namespace UI.FrameStats {
                     float? dedicatedRamUsed = sensors[HardwareStatId.DedicatedRamUsed]?.Value;
                     float? sharedRamUsed    = sensors[HardwareStatId.SharedRamUsed   ]?.Value;
 
+                    TimeSpan sampleInterval = stopwatch.Elapsed;
+                    stopwatch.Restart();
+
                     hwStatsToDisplay[HardwareStatId.BatteryLevel    ] = batteryLevel     is null ? _FIELD_UNKNOWN : $"{batteryLevel:0}%";
                     hwStatsToDisplay[HardwareStatId.CpuTemperature  ] = cpuTemp          is null ? _FIELD_UNKNOWN : $"{cpuTemp:0.0}C";
-                    hwStatsToDisplay[HardwareStatId.CpuLoad         ] = cpuLoad          is null ? _FIELD_UNKNOWN : $"{cpuLoadTracker.AddSample((float)cpuLoad):0}%";
+                    hwStatsToDisplay[HardwareStatId.CpuLoad         ] = cpuLoad          is null ? _FIELD_UNKNOWN : $"{cpuLoadTracker.AddSample(new Sample((float)cpuLoad, sampleInterval)):0}%";
                     hwStatsToDisplay[HardwareStatId.RamUsed         ] = ramUsed          is null ? _FIELD_UNKNOWN : $"{ramUsed:0.0}GB";
                     hwStatsToDisplay[HardwareStatId.GpuTemperature  ] = gpuTemp          is null ? _FIELD_UNKNOWN : $"{gpuTemp:0.0}C";
-                    hwStatsToDisplay[HardwareStatId.GpuLoad         ] = gpuLoad          is null ? _FIELD_UNKNOWN : $"{gpuLoadTracker.AddSample((float)gpuLoad):0}%";
+                    hwStatsToDisplay[HardwareStatId.GpuLoad         ] = gpuLoad          is null ? _FIELD_UNKNOWN : $"{gpuLoadTracker.AddSample(new Sample((float)gpuLoad, sampleInterval)):0}%";
                     hwStatsToDisplay[HardwareStatId.DedicatedRamUsed] = dedicatedRamUsed is null ? _FIELD_UNKNOWN : $"{dedicatedRamUsed / 1000:0.0}GB";
                     hwStatsToDisplay[HardwareStatId.SharedRamUsed   ] = sharedRamUsed    is null ? _FIELD_UNKNOWN : $"{sharedRamUsed / 1000:0.0}GB";
 

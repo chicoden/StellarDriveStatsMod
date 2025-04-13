@@ -1,41 +1,45 @@
 ﻿namespace FrameStats {
-    public class RollingAverager {
-        private double[] _samples;
-        private double _runningTotal;
-        private double _runningAverage;
-        private int _activeSampleCount;
-        private int _queueHeadIndex;
+    public struct Sample {
+        public readonly double CumulativeValue;
+        public readonly TimeSpan Interval;
 
-        public RollingAverager(int maxSamples) {
-            _samples = new double[maxSamples];
+        public Sample(double value, TimeSpan interval) {
+            CumulativeValue = value * interval.TotalSeconds;
+            Interval = interval;
+        }
+    }
+
+    public class RollingAverager {
+        private Queue<Sample> _samples;
+        private TimeSpan _totalInterval;
+        private TimeSpan _maxInterval;
+        private double _runningTotal;
+
+        public RollingAverager(TimeSpan window) {
+            _samples = new Queue<Sample>();
+            _totalInterval = TimeSpan.Zero;
+            _maxInterval = window;
             _runningTotal = 0;
-            _runningAverage = 0;
-            _activeSampleCount = 0;
-            _queueHeadIndex = 0;
         }
 
-        public double AddSample(double sample) {
-            if (_activeSampleCount == _samples.Length) {
-                _runningTotal -= _samples[_queueHeadIndex];
+        public double AddSample(Sample sample) {
+            _samples.Enqueue(sample);
+            _totalInterval += sample.Interval;
+            _runningTotal += sample.CumulativeValue;
+
+            while (_totalInterval > _maxInterval && _samples.Count > 1) {
+                Sample outdatedSample = _samples.Dequeue();
+                _totalInterval -= outdatedSample.Interval;
+                _runningTotal -= outdatedSample.CumulativeValue;
             }
 
-            _runningTotal += sample;
-            _samples[_queueHeadIndex] = sample;
-            _queueHeadIndex = (_queueHeadIndex + 1) % _samples.Length;
-
-            if (_activeSampleCount < _samples.Length) {
-                _activeSampleCount++;
-            }
-
-            _runningAverage = _runningTotal / _activeSampleCount;
-            return _runningAverage;
+            return _runningTotal / _totalInterval.TotalSeconds;
         }
 
         public void Reset() {
+            _samples.Clear();
+            _totalInterval = TimeSpan.Zero;
             _runningTotal = 0;
-            _runningAverage = 0;
-            _activeSampleCount = 0;
-            _queueHeadIndex = 0;
         }
     }
 }
